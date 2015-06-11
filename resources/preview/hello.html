@@ -1,0 +1,669 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+<head>
+   <title>SHINee - Hello</title>
+   <link rel="shortcut icon" href="" />
+   <link rel="stylesheet" type="text/css" href="http://static.tumblr.com/imovwvl/BzRl3ghe1/droidserif.css" />
+
+   <meta http-equiv="Content-Type" content="text/javascript; charset=utf-8" />
+   <meta name="description" content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis faucibus auctor odio a venenatis. Ut at nibh quis augue rhoncus condimentum. Duis ut urna nec orci egestas mollis." />
+
+   <!--
+   THEME BY ELLETRICITY
+   Theme Name: Hello.
+   Author: Gabrielle Wee
+   Credit: http://elletricity.com
+   -->
+
+   <meta name="if:Dark Posts" content="0"/>
+   <meta name="color:Background" content="#ffffff"/>
+   <meta name="image:Background" content="http://static.tumblr.com/imovwvl/68pleh1bz/background.jpg"/>
+   <meta name="text:Text Size" content="11"/>
+   <meta name="font:Text" content="Helvetica, Arial, sans-serif"/>
+   <meta name="color:Text" content="#333333"/>
+   <meta name="color:Link" content="#009966"/>
+   <meta name="color:Link Hover" content="#0077ff"/>
+   <meta name="text:Header Size" content="30"/>
+   <meta name="font:Header" content="'Droid Serif', Times, 'Times New Roman', serif"/>
+   <meta name="if:Capitalized Headers" content="1"/>
+   <meta name="if:Spaced Headers" content="1"/>
+   <meta name="color:Date" content="#ffffff"/>
+   <meta name="color:Date Hover" content="#009966"/>
+   <meta name="text:Date Size" content="9"/>
+   <meta name="if:Zoom" content="1"/>
+   <meta name="if:Italic Quote" content="1"/>
+   <meta name="text:Quote Size" content="17"/>
+   <meta name="color:Chat" content="#f1f1f1"/>
+   <meta name="if:Streampad" content="0"/>
+   <meta name="if:Mini Streampad" content="0"/>
+   <meta name="color:Streampad" content="#009966"/>
+   <meta name="color:Streampad Text" content="#ffffff"/>
+
+   <style type="text/css">
+      html * {
+         margin: 0;
+         padding: 0;
+      }
+
+      body {
+         background: #ffffff url('http://static.tumblr.com/imovwvl/68pleh1bz/background.jpg') fixed;
+         font: 11px Helvetica, Arial, sans-serif;
+         color: #333333;
+      }
+
+      a, a:link, a:visited, a:active {
+         color: #009966;
+         -webkit-transition: color 1s;
+      }
+
+      a:hover {
+         color: #0077ff;
+         -webkit-transition: color 0.2s;
+      }
+
+      a img { border: 0; }
+      .post img, .post a img { max-width: 300px; }
+      blockquote img { max-width: 276px; }
+
+      blockquote {
+         margin: 5px 0 0 11px;
+         padding-left: 10px;
+         border-left: 3px solid;
+      }
+
+      p { padding-top: 5px!important; }
+      blockquote p:first-child { padding-top: 0!important; }
+
+      ol, ul { padding: 5px 0 0 25px; }
+      ul { list-style-type: circle; }
+      ul ul, ul ol, ol ol, ol ul { padding-bottom: 5px; }
+
+      pre {
+         padding: 5px;
+         word-wrap: break-word;
+         background: #f1f1f1;
+         max-height: 200px;
+         overflow: auto;
+      }
+
+      .five { margin-top: -5px; }
+      .left { float: left; }
+      .right { float: right; }
+      .clear { clear: both; }
+
+      #container {
+         margin: auto;
+         padding: 0px;
+      }
+
+      #banner {
+         position: fixed;
+         margin-top: -25px;
+         width: 700px;
+      }
+
+      #banner h1 {
+         margin-top: -70px;
+         font: 30px 'Droid Serif', Times, 'Times New Roman', serif;
+         text-transform: uppercase;
+         text-align: center;
+         letter-spacing: 3px;
+      }
+
+      #nav {
+         text-align: center;
+         font: 9px 'Droid Serif', Times, 'Times New Roman', serif;
+         color: #009966;
+         text-transform: uppercase;
+         letter-spacing: 1px;
+      }
+
+      #nav a { text-decoration: none; }
+
+      #pag {
+         margin-top: 5px;
+      }
+
+      #pag a {
+         display: inline-block;
+         padding: 2px 4px;
+         background: #ffffff;
+         color: #009966;
+         -moz-border-radius: 0.2em;
+         border-radius: 0.2em;
+         -webkit-transition: background-color 1s, color 1s;
+      }
+
+      #current, #pag a:hover {
+         padding: 2px 4px;
+         background: #009966;
+         color: #ffffff;
+         -moz-border-radius: 0.2em;
+         border-radius: 0.2em;
+         -webkit-transition: background-color 0.3s, color 0.3s;
+      }
+
+      #content {
+         position: relative;
+         z-index: 7;
+         float: left;
+         margin: 50px 0 0 700px;
+         width: 330px;
+      }
+
+      .post {
+         padding: 10px 15px;
+         width: 300px;
+         background: transparent url('http://static.tumblr.com/imovwvl/Qvtleh4r1/white.png');
+         
+         margin-bottom: 10px;
+      }
+
+      #icon {
+         width: 50px;
+         float: left;
+         margin-right: 5px;
+      }
+
+      .post h1 {
+         font: 20px 'Droid Serif', Times, 'Times New Roman', serif;
+         text-transform: uppercase;
+         letter-spacing: 2px;
+      }
+
+      h1 a { text-decoration: none; }
+
+      .zoom, .zoom:hover {
+         position: relative;
+         z-index: 1;
+         visibility: hidden;
+         padding: 2px 4px;
+         color: #fff!important;
+         background: #000!important;
+         background: rgba(0, 0, 0, 0.5)!important;
+         text-decoration: none;
+      }
+
+      .photo img {
+         position: relative;
+         margin-top: -15px;
+         z-index: 0;
+      }
+
+      .photo:hover .zoom { visibility: visible; }
+
+      h2 { font: italic 17px 'Droid Serif', Times, 'Times New Roman', serif; }
+
+      .chat ul {
+         padding: 0;
+         list-style-type: none;
+      }
+
+      .chat li, .answer h3 { padding: 5px 10px; }
+      .odd, .answer h3 { background: #f1f1f1; }
+
+      .cover {
+         display: block;
+         float: left;
+         width: 96px;
+         height: 76px;
+         margin-left: -74px;
+         background-image: url('http://static.tumblr.com/imovwvl/i1Hl4rcp8/vinyl.png');
+         z-index: 1;
+      }
+
+      .album_art {
+         display: block;
+         float: left;
+         margin-top: 1px;
+         width: 72px;
+      }
+
+      .album { margin-left: 1px; }
+
+      .info { float: left; margin-left: 5px; }
+      .info span { display: block; }
+      .audio_player { width: 200px; overflow: hidden; }
+      .audio_player embed { float: right; margin-right: -2px; }
+
+      .photos embed, .video object, .video embed, .video iframe { width: 300px; height: 225px; }
+
+      h3 { font: 13px 'Droid Serif', Times, 'Times New Roman', serif; }
+
+      .date { margin-top: 2px; }
+      .date a {
+         display: block;
+         float: left;
+         padding: 2px 4px;
+         margin: 3px 3px 0 0;
+         background: #ffffff;
+         color: #009966;
+         font-size: 9px;
+         text-decoration: none;
+         text-transform: uppercase;
+         -webkit-transition: background-color 1s, color 1s;
+      }
+
+      .date a:hover {
+         background: #009966;
+         color: #ffffff!important;
+         -webkit-transition: background-color 0.2s, color 0.2s;
+      }
+
+      #notes ol { list-style-type: none; padding: 0; }
+      #notes .avatar { display: none; }
+      #notes li { padding: 5px 10px; }
+      #notes li:nth-child(odd) { background: #f1f1f1; }
+
+      #footer { margin-top: 7px; }
+      #footer, #footer a { font-size: 8px; }
+
+      
+
+      #tumblr_controls {
+         position: fixed;
+         top: 0;
+         right: 0;
+      }
+
+      .hide { display: none; }
+   </style>
+
+   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+   <script type="text/javascript" src="http://static.tumblr.com/imovwvl/Ccalegg5i/youtube.js"></script>
+<meta http-equiv="x-dns-prefetch-control" content="off"/></head>
+<body>
+   <div id="container">
+      <div id="banner">
+         <a href="/"><img src="http://static.tumblr.com/imovwvl/1a1legcua/shinee-hello.png" alt="" /></a>
+         <h1>Lorem Ipsum</h1>
+         <div id="nav">
+            <a href="/">Archive</a> &middot;
+            <a href="/">RSS</a>
+            &middot; <a href="/">Ask</a>
+            &middot; <a href="/">Submit</a>
+            <br />
+
+            
+               Pages&nbsp;&middot; <a href="/" class="page">Test</a>&nbsp;&middot; <a href="/" class="page">Test</a>
+            
+
+            <div id="pag">
+               
+                  
+               
+
+               
+
+               
+
+               
+                 <span id="current">1</span>
+                 
+               
+                 
+                 <a href="/page/2">2</a>
+               
+                 
+                 <a href="/page/3">3</a>
+               
+
+               
+                  
+                     <a href="/page/2">&rsaquo;</a>
+                  
+               
+
+               
+
+               
+            </div>
+
+            <div id="footer">
+               Hello by <a href="http://elletricity.com">Gabrielle Wee</a>.
+               <br />Powered by <a href="http://tumblr.com">Tumblr</a>.
+            </div>
+         </div>
+      </div>
+
+      <div id="content">
+         <div class="post">
+            <img id="icon" src="http://30.media.tumblr.com/avatar_ffac4b3e2cb8_64.png" alt="icon" />
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis faucibus auctor odio a venenatis. Ut at nibh quis augue rhoncus condimentum. Duis ut urna nec orci egestas<span class="hide"> mollis</span>.
+         </div>
+
+         
+            <div class="quote post">
+               
+
+               
+
+               
+
+               
+                  <h2>It does not matter how slow you go so long as you do not stop.</h2>
+                  <div class="caption">Wisdom of <a href="http://en.wikipedia.org/wiki/Confucius">Confucius</a> (via <a href="http://demo.tumblr.com/">demo</a>)</div>
+               
+
+               
+
+               
+
+               
+
+               
+
+               
+
+               
+                  <div class="date">
+                     <a href="http://glw.tumblr.com/post/2565526640">1 day ago</a>
+                     <a href="/day/2011/01/2">January 02, 2011</a>
+                     <a href="http://demo.tumblr.com/post/236/it-does-not-matter-how-slow-you-go-so-long-as-you" class="source_link">demo</a>
+                     
+                        <a href="http://glw.tumblr.com/post/2565526640">5,434 notes</a>
+                     
+                     
+                     <div class="clear"></div>
+                  </div>
+               
+            </div>
+
+            
+         
+            <div class="post">
+               
+
+               
+                  <div class="photo">
+                     <a class="zoom" href="http://glw.tumblr.com/photo/1280/2565524577/1/tumblr_kzjlfiTnfe1qz4rgh">zoom</a><br />
+                     <a href="http://glw.tumblr.com/photo/1280/2565524577/1/tumblr_kzjlfiTnfe1qz4rgh"><img src="http://29.media.tumblr.com/tumblr_kzjlfiTnfe1qz4rgho1_400.jpg" alt="demo:
+ 
+Passing through Times Square by&nbsp;Mareen Fischinger
+" /></a>
+                  </div>
+                  <div class="caption"><p><a href="http://demo.tumblr.com/post/459265350/passing-through-times-square-by-mareen-fischinger">demo</a>:</p> 
+<blockquote> 
+<p>Passing through Times Square by <a href="http://www.mareenfischinger.com/">Mareen Fischinger</a></p> 
+</blockquote></div>
+               
+
+               
+
+               
+
+               
+
+               
+
+               
+
+               
+
+               
+
+               
+                  <div class="date">
+                     <a href="http://glw.tumblr.com/post/2565524577">1 day ago</a>
+                     <a href="/day/2011/01/2">January 02, 2011</a>
+                     <a href="http://demo.tumblr.com/post/459265350/passing-through-times-square-by-mareen-fischinger" class="source_link">demo</a>
+                     
+                        <a href="http://glw.tumblr.com/post/2565524577">829 notes</a>
+                     
+                     
+                     <div class="clear"></div>
+                  </div>
+               
+            </div>
+
+            
+         
+            <div class="link post">
+               
+
+               
+
+               
+
+               
+
+               
+                  <h1><a href="http://" >My favorite web site &rsaquo;</a></h1>
+                  
+                     <div class="five"><p><a href="http://demo.tumblr.com/post/234/my-favorite-web-site">demo</a>:</p> 
+<blockquote> 
+<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p> 
+</blockquote></div>
+                  
+               
+
+               
+
+               
+
+               
+
+               
+
+               
+                  <div class="date">
+                     <a href="http://glw.tumblr.com/post/2565522410">1 day ago</a>
+                     <a href="/day/2011/01/2">January 02, 2011</a>
+                     <a href="http://demo.tumblr.com/post/234/my-favorite-web-site" class="source_link">demo</a>
+                     
+                        <a href="http://glw.tumblr.com/post/2565522410">1,030 notes</a>
+                     
+                     
+                     <div class="clear"></div>
+                  </div>
+               
+            </div>
+
+            
+         
+            <div class="chat post">
+               
+
+               
+
+               
+
+               
+
+               
+
+               
+                  
+                  <ul>
+                     <li class="odd user_1"><strong>Jack:</strong> Hey, you know what sucks?
+</li>
+                  
+                     <li class="even user_2"><strong>Lindsey:</strong> vaccuums
+</li>
+                  
+                     <li class="odd user_1"><strong>Jack:</strong> Hey, you know what sucks in a metaphorical sense?
+</li>
+                  
+                     <li class="even user_2"><strong>Lindsey:</strong> black holes
+</li>
+                  
+                     <li class="odd user_1"><strong>Jack:</strong> Hey, you know what just isn&#039;t cool?
+</li>
+                  
+                     <li class="even user_2"><strong>Lindsey:</strong> lava?</li>
+                  </ul>
+               
+
+               
+
+               
+
+               
+
+               
+                  <div class="date">
+                     <a href="http://glw.tumblr.com/post/2565520264">1 day ago</a>
+                     <a href="/day/2011/01/2">January 02, 2011</a>
+                     <a href="http://demo.tumblr.com/post/233/jack-hey-you-know-what-sucks-lindsey" class="source_link">demo</a>
+                     
+                        <a href="http://glw.tumblr.com/post/2565520264">1,792 notes</a>
+                     
+                     
+                     <div class="clear"></div>
+                  </div>
+               
+            </div>
+
+            
+         
+            <div class="video post">
+               
+
+               
+
+               
+
+               
+
+               
+
+               
+
+               
+
+               
+                  <object width="400" height="251"><param name="movie" value="http://www.youtube.com/v/3yW13T2sfKg&amp;rel=0&amp;egm=0&amp;showinfo=0&amp;fs=1"></param><param name="wmode" value="transparent"></param><param name="allowFullScreen" value="true"></param><embed src="http://www.youtube.com/v/3yW13T2sfKg&amp;rel=0&amp;egm=0&amp;showinfo=0&amp;fs=1" type="application/x-shockwave-flash" width="400" height="251" allowFullScreen="true" wmode="transparent"></embed></object>
+                  <div class="caption"><p><a href="http://gabbee.tumblr.com/post/1123301662">gabbee</a>:</p> 
+<blockquote> 
+<p>2NE1 - Go Away</p> 
+</blockquote></div>
+               
+
+               
+
+               
+                  <div class="date">
+                     <a href="http://glw.tumblr.com/post/2565515392">1 day ago</a>
+                     <a href="/day/2011/01/2">January 02, 2011</a>
+                     <a href="http://www.youtube.com/watch?v=3yW13T2sfKg" class="source_link">youtube.com</a>
+                     
+                        <a href="http://glw.tumblr.com/post/2565515392">2 notes</a>
+                     
+                     
+                     <div class="clear"></div>
+                  </div>
+               
+            </div>
+
+            
+         
+            <div class="audio post">
+               
+
+               
+
+               
+
+               
+
+               
+
+               
+
+               
+                  <div class="album">
+                     <img src="http://28.media.tumblr.com/tumblr_ksc4i2SkVU1qz8ouqo1_r2_cover.jpg" class="album_art" alt="" />
+                     <span class="cover"></span>
+                  </div>
+                  <div class="info" style="margin-top: 2px;">
+                     <script type="text/javascript" language="javascript" src="http://assets.tumblr.com/javascript/tumblelog.js?17"></script><span id="audio_player_2565543297">[<a href="http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash" target="_blank">Flash 9</a> is required to listen to audio.]</span><script type="text/javascript">replaceIfFlash(9,"audio_player_2565543297",'\x3cdiv class=\x22audio_player\x22\x3e<embed type="application/x-shockwave-flash" src="http://glw.tumblr.com/swf/audio_player.swf?audio_file=http://www.tumblr.com/audio_file/2565543297/tumblr_ksc4i2SkVU1qz8ouq&color=E4E4E4" height="27" width="207" quality="best"></embed>\x3c/div\x3e')</script>
+                     <div style="margin-top: 5px;">
+                        <span><strong>Title</strong>:
+                        Fingers Crossed</span>
+                        <span><strong>Artist:</strong>
+                        Allison Weiss</span>
+                        <span>520,266 plays</span>
+                     </div>
+                  </div>
+                  <div class="clear"></div>
+                  <div class="caption"><p><a href="http://demo.tumblr.com/post/459260683/allison-weiss-fingers-crossed">demo</a>:</p> 
+<blockquote> 
+<p><strong><a href="http://allisonweiss.tumblr.com/">Allison Weiss</a> —</strong> Fingers Crossed</p> 
+</blockquote></div>
+               
+
+               
+
+               
+
+               
+                  <div class="date">
+                     <a href="http://glw.tumblr.com/post/2565543297">1 day ago</a>
+                     <a href="/day/2011/01/2">January 02, 2011</a>
+                     <a href="http://allisonweiss.tumblr.com/post/228022847/allison-weiss-fingers-crossed-from-upcoming" class="source_link">allisonweiss</a>
+                     
+                        <a href="http://glw.tumblr.com/post/2565543297">481 notes</a>
+                     
+                     
+                     <div class="clear"></div>
+                  </div>
+               
+            </div>
+
+            
+         
+            <div class="text post">
+               
+                  <h1>An example post</h1>
+                  <div class="five"><p><a href="http://demo.tumblr.com/post/232/an-example-post">demo</a>:</p> 
+<blockquote> 
+<p>Lorem ipsum dolor sit amet, consectetuer <a href="/">adipiscing elit</a>. Aliquam nisi lorem, pulvinar id, commodo feugiat, vehicula et, mauris. Aliquam mattis porta urna. Maecenas dui neque, rhoncus sed, vehicula vitae, auctor at, nisi. Aenean id massa ut lacus molestie porta. Curabitur sit amet quam id libero suscipit venenatis.</p> 
+<ul> 
+<li>Lorem ipsum dolor sit amet.</li> 
+<li>Consectetuer adipiscing elit. </li> 
+<li>Nam at tortor quis ipsum tempor aliquet.</li> 
+</ul> 
+<p>Cum sociis <a href="/">natoque penatibus</a> et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse sed ligula. Sed volutpat odio non turpis gravida luctus. Praesent elit pede, iaculis facilisis, vehicula mattis, tempus non, arcu.</p> 
+<blockquote>Donec placerat mauris commodo dolor. Nulla tincidunt. Nulla vitae augue.</blockquote> 
+<p>Suspendisse ac pede. Cras <a href="/">tincidunt pretium</a> felis. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Pellentesque porttitor mi id felis. Maecenas nec augue. Praesent a quam pretium leo congue accumsan.</p> 
+</blockquote></div>
+               
+
+               
+
+               
+
+               
+
+               
+
+               
+
+               
+
+               
+
+               
+
+               
+                  <div class="date">
+                     <a href="http://glw.tumblr.com/post/2565505512">1 day ago</a>
+                     <a href="/day/2011/01/2">January 02, 2011</a>
+                     <a href="http://demo.tumblr.com/post/232/an-example-post" class="source_link">demo</a>
+                     
+                        <a href="http://glw.tumblr.com/post/2565505512">1,302 notes</a>
+                     
+                     
+                     <div class="clear"></div>
+                  </div>
+               
+            </div>
+
+            
+         
+      </div>
+      <div style="clear: both; height: 50px;"></div>
+   </div>
+</body>
+</html>

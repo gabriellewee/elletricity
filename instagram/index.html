@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if IE 8]>	<html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+<title>ELLETRICITY.COM &middot; Instagram Access Token</title>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta charset="UTF-8"/>
+<meta name="description" content="Themes for Tumblr, Wordpress, and other resources by Gabrielle Wee." />
+
+<script type="text/javascript">
+if (location.host == 'elletricity.github.io')
+  location.replace(location.href.replace('elletricity.github.io', 'elletricity.com'));
+</script>
+<link rel="canonical" href="http://elletricity.com/instagram/"/>
+
+<link href="/favicon.ico?v=2" rel="shortcut icon"/>
+<link href="/favicon-64.png" rel="icon" type="image/png"/>
+<link href="/favicon-180.png" rel="apple-touch-icon-precomposed"/>
+
+<meta name="msapplication-square150x150logo" content="/favicon-180.png"/>
+<meta name="msapplication-TileImage" content="/favicon-180.png">
+<meta name="msapplication-TileColor" content="#d34836"/>
+<meta name="application-name" content="ELLETRICITY.COM" />
+
+<link rel="stylesheet" type="text/css" href="/stylesheets/clear.min.css"/>
+<link rel="stylesheet" type="text/css" href="/stylesheets/clean.min.css"/>
+<link rel="stylesheet" type="text/css" href="/fonts/typicons.min.css"/>
+
+<!-- THEME BY GABRIELLE WEE -->
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="/javascripts/modernizr.js"></script>
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-20500022-3']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+	var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</head>
+<body>
+<!--[if lt IE 9]>
+<div id="warning">This theme does not support your browser (Internet Explorer 8 and below).<br/>Please update to a <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie">newer version</a> of Internet Explorer or try another browser - I recommend <a href="https://www.google.com/intl/en/chrome/browser/">Google Chrome</a> or <a href="http://www.mozilla.org/en-US/firefox/new/">Mozilla Firefox</a>.</div>
+<![endif]-->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=115156425222945&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<div class='fb-like' data-href='https://www.facebook.com/elletricity' data-layout='button_count' data-action='like' data-show-faces='false' data-share='false'></div>
+
+<header class="row" id="top">
+	<div class="large-12 columns">
+		<div id="icon">
+			<a href="/">
+				<img src="/icon.png" alt=""/>
+			</a>
+		</div>
+		<nav class="links">
+			<ul class="cf small-block-grid-4">
+				<li>
+					<i class="typcn typcn-user-outline"></i>
+					<a href="/blog/">Blog</a>
+					<a href="/about/">About</a>
+				</li>
+				<li>
+					<i class="typcn typcn-leaf"></i>
+					<a href="/resources/">Resources</a>
+					<a href="/tutorials/">Tutorials</a>
+				</li>
+				<li>
+					<i class="typcn typcn-lightbulb"></i>
+					<a href="/faq/">FAQ</a>
+					<a href="/answers/">Q & A</a>
+				</li>
+				<li>
+					<i class="typcn typcn-directions"></i>
+					<a href="http://gabrielleismy.name">Links</a>
+					<a href="/contact/">Contact</a>
+				</li>
+			</ul>
+		</nav>
+	</div>
+</header>
+<section class="row" id="instagram">
+	<article class="intro text post large-12 columns">
+		<h2 class="authorize">To set up Instagram access on any supported themes, you'll need to allow us to access your basic data and feed. Once you accept, you'll be returned to this page.</h2>
+		<p class="authorize text-center"><a href="http://instagram.com/oauth/authorize/?client_id=44bdc22352a74ce0bedd2df5c49d0beb&redirect_uri=http://elletricity.com/instagram/&response_type=token">Click here to begin setup.</a></p>
+		<h2 class="token">You've successfully authorized Instagram. Copy the code below and paste it into <code>Customize</code> &rarr; <code>Appearance</code> &rarr; <code>Instagram Access Token</code>.</h2>
+		<h2 class="token-error">Looks like something went wrong. You may have hit 'no' when trying to authorize Instagram.</h2>
+		<p class="token-error text-center"><a href="http://instagram.com/oauth/authorize/?client_id=44bdc22352a74ce0bedd2df5c49d0beb&redirect_uri=http://elletricity.com/instagram/&response_type=token">Try again?</a></p>
+		<input type="text" id="token" class="input-xlarge" value="" readonly="readonly">
+		<script type="text/javascript">
+			$(function () {
+				var hash = window.location.hash;
+		        var q = "access_token=";
+		        if (hash.indexOf(q) != -1) {
+		            var access_token = hash.split(q)[1];
+		        }
+		        var hashSearch = new function() {
+		            var params = {};
+		            var hashStr = window.location.hash, hashArray, keyVal;
+		            hashStr = hashStr.substring(1, hashStr.length);
+		            hashArray = hashStr.split("&");
+		            for (var i = 0; i < hashArray.length; i++) {
+		                keyVal = hashArray[i].split("=");
+		                params[unescape(keyVal[0])] = typeof keyVal[1] != "undefined" ? unescape(keyVal[1]) : keyVal[1];
+		            }
+		            this.get = function(key, value) {
+		                return params[key];
+		            };
+		            this.keyExists = function(key) {
+		                return params.hasOwnProperty(key);
+		            };
+				}();
+		        if (hashSearch.keyExists("access_token")) {
+		            $(".authorize").hide();
+		            $(".token").show();
+		            $(".token-error").hide();
+		            $("input#token").val(hashSearch.get("access_token"));
+		            $("input#token").focus().select();
+		            $("input#token").click(function(e) {
+		                $(this).focus().select();
+		                e.preventDefault();
+		            });
+		        }
+		        if (hashSearch.keyExists("error")) {
+		            $(".authorize").hide();
+		            $(".token").hide();
+		            $(".token-error").show();
+		        }
+			});
+		</script>
+	</article>
+</section>
+<script type="text/javascript" src="/javascripts/clean.min.js"></script>
+<!-- Start of StatCounter Code for Default Guide -->
+<script type="text/javascript">
+var sc_project=8258207;
+var sc_invisible=0;
+var sc_security="4d8f3249";
+</script>
+<script type="text/javascript"
+src="http://www.statcounter.com/counter/counter.js"></script>
+<noscript><div class="statcounter"><a title="free hit
+counter" href="http://statcounter.com/free-hit-counter/"
+target="_blank"><img class="statcounter"
+src="http://c.statcounter.com/8258207/0/4d8f3249/1/"
+alt="free hit counter"></a></div></noscript>
+<!-- End of StatCounter Code for Default Guide -->
+<script src="//ajax.googleapis.com/ajax/libs/webfont/1/webfont.js"></script>
+<script>
+  WebFont.load({
+	google: {
+	  families: ['Source Sans Pro:300,400,600,700,900,300italic,400italic,600italic,700italic', 'Inconsolata:400,700']
+	}
+  });
+</script>
+</body>
+</html>

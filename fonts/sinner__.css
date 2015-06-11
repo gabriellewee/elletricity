@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'sinnerRegular';
+    src: url('sinner__.eot');
+    src: url('sinner__.eot') format('embedded-opentype'),
+         url('sinner__.woff2') format('woff2'),
+         url('sinner__.woff') format('woff'),
+         url('sinner__.ttf') format('truetype'),
+         url('sinner__.svg#sinnerRegular') format('svg');
+}

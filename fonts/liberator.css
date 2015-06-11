@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'LiberatorRegular';
+    src: url('liberator.eot');
+    src: url('liberator.eot') format('embedded-opentype'),
+         url('liberator.woff2') format('woff2'),
+         url('liberator.woff') format('woff'),
+         url('liberator.ttf') format('truetype'),
+         url('liberator.svg#LiberatorRegular') format('svg');
+}
