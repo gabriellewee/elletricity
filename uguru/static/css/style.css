@@ -1,0 +1,487 @@
+body {
+  padding: 0 !important;
+  margin: 0 !important;
+  background: #40484B;
+  font-weight: 400;
+}
+
+::-webkit-selection {
+  background: #8A9EA3;
+  color: white;
+}
+
+::-moz-selection {
+  background: #8A9EA3;
+  color: white;
+}
+
+::selection {
+  background: #8A9EA3;
+  color: white;
+}
+
+#sticker-sheet {
+  -ms-box-orient: horizontal;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: flex;
+  -ms-flex-flow: row wrap;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  max-width: 1278px;
+  margin: 0 auto;
+}
+
+#sticker-sheet .sticker-width {
+  width: calc(100% / 3);
+}
+
+#sticker-sheet .sticker-section {
+  width: calc(100% / 3);
+}
+
+#sticker-sheet .sticker-section > h1 {
+  padding: 10px 15px 0;
+  font-size: 20px;
+}
+
+#sticker-sheet .sticker-section > p {
+  margin: 0;
+  padding: 10px 15px 0;
+  font-family: "Source Code Pro", monospace;
+  font-size: 12px;
+}
+
+#sticker-sheet .sticker-section textarea[onclick], #sticker-sheet .sticker-section input[onclick] {
+  margin: 0;
+  border: 0;
+  color: white;
+  font-family: "Source Code Pro", monospace !important;
+  font-size: 12px;
+}
+
+#sticker-sheet .sticker-section textarea[onclick] {
+  white-space: nowrap;
+  padding: 10px 15px;
+  cursor: text;
+  resize: none;
+  font-size: 12px;
+}
+
+#sticker-sheet .sticker-section textarea[onclick]:not([class*="bg-"]) {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+#sticker-sheet .sticker-section textarea[onclick]:hover, #sticker-sheet .sticker-section textarea[onclick]:focus {
+  background: rgba(255, 255, 255, 0.95);
+  color: #2B3234;
+}
+
+#sticker-sheet .sticker-section textarea[onclick] span {
+  display: none !important;
+}
+
+#sticker-sheet .sticker-section input[onclick] {
+  cursor: text;
+  background: transparent;
+}
+
+#sticker-sheet .sticker-section input[onclick]:hover, #sticker-sheet .sticker-section input[onclick]:focus {
+  background: rgba(255, 255, 255, 0.95);
+  color: #2B3234;
+}
+
+#sticker-sheet .sticker-section > div:not(.uguru) {
+  font-family: "Source Code Pro", monospace;
+  font-size: 12px;
+}
+
+#sticker-sheet .sticker-section > div:not(.uguru) h1 {
+  font-size: 14px !important;
+}
+
+#sticker-sheet .sticker-section > div:not(.uguru) h1 input {
+  font-size: 14px !important;
+  font-weight: 600;
+}
+
+#sticker-sheet .sticker-section > div:not(.uguru) > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  padding: 7.5px;
+}
+
+#sticker-sheet .sticker-section > div:not(.uguru) > ul:first-child {
+  padding-top: 15px;
+}
+
+#sticker-sheet .sticker-section > div:not(.uguru) > ul:last-child {
+  padding-bottom: 15px;
+}
+
+#sticker-sheet .sticker-section > div:not(.uguru) > ul > li {
+  padding: 7.5px;
+}
+
+#sticker-sheet .sticker-section > div:not(.uguru) > ul > li span {
+  -ms-box-orient: horizontal;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  min-height: 30px;
+}
+
+#sticker-sheet .sticker-section > div:not(.uguru) > ul > li span i {
+  display: block;
+  width: 100%;
+}
+
+#sticker-sheet .sticker-section > div:not(.uguru) > ul > li span:not([class*="bg-"]) {
+  background: #576267;
+}
+
+#sticker-sheet .sticker-section.sticker-medium {
+  width: calc(100% / 3 * 2);
+}
+
+#sticker-sheet .sticker-section.sticker-medium > h1 {
+  font-size: 28px;
+}
+
+#sticker-sheet .sticker-section.sticker-large {
+  width: 100%;
+}
+
+#sticker-sheet .sticker-section.sticker-large > h1 {
+  font-size: 28px;
+}
+
+#sticker-sheet .sticker-section#sticker-grid {
+  background: #576267;
+}
+
+#sticker-sheet .sticker-section#sticker-grid > div > ul > li {
+  padding: 0 7.5px;
+}
+
+#sticker-sheet .sticker-section#sticker-grid > div > ul > li span {
+  background: #6f7d82;
+}
+
+#sticker-sheet .sticker-section.sticker-type ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  -ms-box-orient: horizontal;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: flex;
+  -ms-flex-flow: row wrap;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  padding: 7.5px !important;
+}
+
+#sticker-sheet .sticker-section.sticker-type ul li {
+  padding: 7.5px;
+}
+
+#sticker-sheet .sticker-section.sticker-type#sticker-type-weight {
+  background: #505a5e;
+}
+
+#sticker-sheet .sticker-section.sticker-type#sticker-type-align {
+  background: #4c5559;
+}
+
+#sticker-sheet .sticker-section.sticker-type#sticker-type-spacing {
+  background: #475053;
+}
+
+#sticker-sheet .sticker-section.sticker-type#sticker-type-capital {
+  background: #424b4e;
+}
+
+#sticker-sheet .sticker-section.sticker-type#sticker-type-colors {
+  background: #475053;
+  font-weight: 600;
+}
+
+#sticker-sheet .sticker-section.sticker-type#sticker-type-colors input {
+  font-weight: 600;
+}
+
+#sticker-sheet .sticker-section#sticker-margin-padding {
+  background: #454d51;
+}
+
+#sticker-sheet .sticker-section#sticker-margin-padding ul {
+  padding: 7.5px !important;
+}
+
+#sticker-sheet .sticker-section#sticker-margin-padding ul li {
+  padding: 7.5px !important;
+  height: 100px;
+}
+
+#sticker-sheet .sticker-section#sticker-margin-padding ul li > div {
+  height: 100%;
+  background: #576267;
+}
+
+#sticker-sheet .sticker-section#sticker-margin-padding ul li > div div {
+  -ms-box-orient: horizontal;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  height: 100%;
+  background: #6f7d82;
+}
+
+#sticker-sheet .sticker-section#sticker-flex {
+  background: #495356;
+}
+
+#sticker-sheet .sticker-section#sticker-flex ul {
+  padding: 7.5px !important;
+}
+
+#sticker-sheet .sticker-section#sticker-flex ul li {
+  padding: 7.5px !important;
+}
+
+#sticker-sheet .sticker-section#sticker-flex ul li div {
+  padding: 10px 15px;
+  background: #637074;
+  text-align: center;
+}
+
+#sticker-sheet .sticker-section#sticker-flex ul li div h1 {
+  font-size: 18px;
+}
+
+#sticker-sheet .sticker-section#sticker-bg {
+  background: #4e585c;
+}
+
+#sticker-sheet .sticker-section#sticker-bg > div ul:first-child {
+  padding-bottom: 0 !important;
+}
+
+#sticker-sheet .sticker-section#sticker-bg > div ul:last-child {
+  padding-top: 0 !important;
+}
+
+#sticker-sheet .sticker-section#sticker-buttons {
+  background: #576267;
+  text-align: center;
+}
+
+#sticker-sheet .sticker-section#sticker-buttons span {
+  margin-top: 5px;
+}
+
+#sticker-sheet .sticker-section.sticker-component textarea[onclick] {
+  display: block;
+  width: 100% !important;
+}
+
+#sticker-sheet .sticker-section.sticker-component > h1 {
+  padding-bottom: 10px;
+}
+
+#sticker-sheet .sticker-section.sticker-component .bg-shamrock + textarea[onclick], #sticker-sheet .sticker-section.sticker-component .mix-shamrock {
+  background: #557e78 !important;
+}
+
+#sticker-sheet .sticker-section.sticker-component .bg-shamrock + textarea[onclick]:hover, #sticker-sheet .sticker-section.sticker-component .bg-shamrock + textarea[onclick]:focus, #sticker-sheet .sticker-section.sticker-component .mix-shamrock:hover, #sticker-sheet .sticker-section.sticker-component .mix-shamrock:focus {
+  background: white !important;
+}
+
+#sticker-sheet .sticker-section.sticker-component .bg-azure + textarea[onclick], #sticker-sheet .sticker-section.sticker-component .mix-azure {
+  background: #4b7681 !important;
+}
+
+#sticker-sheet .sticker-section.sticker-component .bg-azure + textarea[onclick]:hover, #sticker-sheet .sticker-section.sticker-component .bg-azure + textarea[onclick]:focus, #sticker-sheet .sticker-section.sticker-component .mix-azure:hover, #sticker-sheet .sticker-section.sticker-component .mix-azure:focus {
+  background: white !important;
+}
+
+#sticker-sheet .sticker-section.sticker-component .bg-lake + textarea[onclick], #sticker-sheet .sticker-section.sticker-component .mix-lake {
+  background: #487794 !important;
+}
+
+#sticker-sheet .sticker-section.sticker-component .bg-lake + textarea[onclick]:hover, #sticker-sheet .sticker-section.sticker-component .bg-lake + textarea[onclick]:focus, #sticker-sheet .sticker-section.sticker-component .mix-lake:hover, #sticker-sheet .sticker-section.sticker-component .mix-lake:focus {
+  background: white !important;
+}
+
+#sticker-sheet .sticker-section.sticker-component .mix-gold {
+  background: #9b874d !important;
+}
+
+#sticker-sheet .sticker-section.sticker-component .mix-gold:hover, #sticker-sheet .sticker-section.sticker-component .mix-gold:focus {
+  background: white !important;
+}
+
+#sticker-sheet .sticker-section.sticker-component .mix-campus {
+  background: #657377 !important;
+}
+
+#sticker-sheet .sticker-section.sticker-component .mix-campus:hover, #sticker-sheet .sticker-section.sticker-component .mix-campus:focus {
+  background: white !important;
+}
+
+#sticker-sheet .sticker-section#sticker-mobile-headers {
+  background: #5f6a6f;
+}
+
+#sticker-sheet .sticker-section#sticker-mobile-headers .third {
+  height: 192px;
+}
+
+#sticker-sheet .sticker-section#sticker-input {
+  background: #6f7d82;
+}
+
+#sticker-sheet .sticker-section#sticker-input textarea[onclick] {
+  margin-top: 5px !important;
+}
+
+#sticker-sheet .sticker-section#sticker-lists {
+  background: #4e585c;
+}
+
+#sticker-sheet .sticker-section#sticker-lists textarea + ul {
+  padding: 1px 0 0;
+}
+
+#sticker-sheet .sticker-section#sticker-progress {
+  background: #454d51;
+}
+
+#sticker-sheet .sticker-section#sticker-progress progress {
+  display: block;
+  margin: 0 15px 10px;
+  vertical-align: top;
+  width: calc(100% - 30px);
+}
+
+#sticker-sheet .sticker-section#sticker-progress textarea:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+#sticker-sheet .sticker-section#sticker-picker {
+  background: #4c5559;
+}
+
+#sticker-sheet .sticker-section#sticker-picker .picker {
+  padding: 0 15px;
+}
+
+#sticker-sheet .sticker-section#sticker-loaders {
+  background: #7c8a8f;
+}
+
+#sticker-sheet .sticker-section#sticker-loaders svg {
+  display: block;
+  margin: 0 auto;
+}
+
+#sticker-sheet .sticker-section#sticker-loaders #checkmark line {
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  -o-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+#sticker-sheet .sticker-section#sticker-user-icon ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+#sticker-sheet .sticker-section#sticker-user-icon ul li {
+  padding: 0 15px;
+}
+
+#sticker-sheet .sticker-section#sticker-dropdowns {
+  background: #495356;
+}
+
+#sticker-sheet .sticker-section#sticker-tooltips {
+  background: #556064;
+}
+
+#sticker-sheet .sticker-section#sticker-color-picker {
+  background: #454d51;
+}
+
+#sticker-sheet .sticker-section#sticker-school-card {
+  background: #4c5559;
+}
+
+#sticker-sheet .sticker-section#sticker-school-card > section {
+  padding: 0 15px 15px;
+}
+
+#sticker-sheet .sticker-section#sticker-profile-card {
+  background: #5f6a6f;
+}
+
+#sticker-sheet .sticker-section#sticker-profile-card > section {
+  padding: 0 15px 15px;
+}
+
+#sticker-sheet .sticker-section#sticker-profile-card .pf-card-mini {
+  margin: 0 auto;
+}
+
+#sticker-sheet .sticker-section#sticker-profile-card textarea + section {
+  padding-top: 15px;
+}
+
+#sticker-sheet .sticker-section#sticker-rating {
+  background: #556064;
+}
+
+#sticker-sheet .sticker-section#sticker-rating .rating-stars {
+  margin: 0 auto 10px;
+  max-width: 150px;
+}
+
+#sticker-sheet .sticker-section#sticker-tag-list {
+  background: #454d51;
+}
+
+#sticker-sheet .sticker-section#sticker-tag-list .tag-list {
+  padding: 0 15px 15px;
+}
+
+#sticker-sheet .sticker-section#sticker-attach-list {
+  background: #576267;
+}

@@ -1,0 +1,361 @@
+@import 'mixin';
+
+body {
+	padding: 0!important;
+	margin: 0!important;
+	background: $slate;
+	font-weight: 400;
+}
+
+::-webkit-selection {
+	background: $campus;
+	color: white;
+}
+::-moz-selection {
+	background: $campus;
+	color: white;
+}
+::selection {
+	background: $campus;
+	color: white;
+}
+
+#sticker-sheet {
+	@include flex;
+	@include flex-wrap;
+	max-width: 1278px;
+	margin: 0 auto;
+	.sticker-width {
+		width: calc(100% / 3);
+	}
+	.sticker-section {
+		width: calc(100% / 3);
+		> h1 {
+			padding: 10px 15px 0;
+			font-size: 20px;
+		}
+		> p {
+			margin: 0;
+			padding: 10px 15px 0;
+			font-family: "Source Code Pro", monospace;
+			font-size: 12px;
+		}
+		textarea[onclick], input[onclick] {
+			margin: 0;
+			border: 0;
+			color: white;
+			font-family: "Source Code Pro", monospace!important;
+			font-size: 12px;
+		}
+		textarea[onclick] {
+			white-space: nowrap;
+			padding: 10px 15px;
+			cursor: text;
+			resize: none;
+			font-size: 12px;
+			&:not([class*="bg-"]) {
+				background: rgba(white, .2);
+			}
+			&:hover, &:focus {
+				background: rgba(white,.95);
+				color: $charcoal;
+			}
+			span {
+				display: none!important;
+			}
+		}
+		input[onclick] {
+			cursor: text;
+			background: transparent;
+			&:hover, &:focus {
+				background: rgba(white,.95);
+				color: $charcoal;
+			}
+		}
+		> div:not(.uguru) {
+			font-family: "Source Code Pro", monospace;
+			font-size: 12px;
+			h1 {
+				font-size: 14px!important;
+				input {
+					font-size: 14px!important;
+					font-weight: 600;
+				}
+			}
+			> ul {
+				@include listless;
+				padding: 7.5px;
+				&:first-child {
+					padding-top: 15px;
+				}
+				&:last-child {
+					padding-bottom: 15px;
+				}
+				> li {
+					padding: 7.5px;
+					span {
+						@include flex;
+						@include flex-center;
+						min-height: 30px;
+						i {
+							display: block;
+							width: 100%;
+						}
+					}
+					span:not([class*="bg-"]) {
+						background: lighten($slate, 10%);
+					}
+				}
+			}
+		}
+		&.sticker-medium {
+			width: calc(100% / 3 * 2);
+			> h1 {
+				font-size: 28px;
+			}
+		}
+		&.sticker-large {
+			width: 100%;
+			> h1 {
+				font-size: 28px;
+			}
+		}
+		&#sticker-grid {
+			background: lighten($slate, 10%);
+			> div {
+				> ul {
+					> li {
+						padding: 0 7.5px;
+						span {
+							background: lighten($slate, 20%);
+						}
+					}
+				}
+			}
+		}
+		&.sticker-type {
+			ul {
+				@include listless;
+				@include flex;
+				@include flex-wrap;
+				padding: 7.5px!important;
+				li {
+					padding: 7.5px;
+				}
+			}
+			&#sticker-type-weight {
+				background: lighten($slate, 7%);
+			}
+			&#sticker-type-align {
+				background: lighten($slate, 5%);
+			}
+			&#sticker-type-spacing {
+				background: lighten($slate, 3%);
+			}
+			&#sticker-type-capital {
+				background: lighten($slate, 1%);
+			}
+			&#sticker-type-colors {
+				background: lighten($slate, 3%);
+				font-weight: 600;
+				input {
+					font-weight: 600;
+				}
+			}
+		}
+		&#sticker-margin-padding {
+			background: lighten($slate, 2%);
+			ul {
+				padding: 7.5px!important;
+				li {
+					padding: 7.5px!important;
+					height: 100px;
+					> div {
+						height: 100%;
+						background: lighten($slate, 10%);
+						div {
+							@include flex;
+							@include flex-center;
+							height: 100%;
+							background: lighten($slate, 20%);
+						}
+					}
+				}
+			}
+		}
+		&#sticker-flex {
+			background: lighten($slate, 4%);
+			ul {
+				padding: 7.5px!important;
+				li {
+					padding: 7.5px!important;
+					div {
+						padding: 10px 15px;
+						background: lighten($slate, 15%);
+						text-align: center;
+						h1 {
+							font-size: 18px;
+						}
+					}
+				}
+			}
+		}
+		&#sticker-bg {
+			background: lighten($slate, 6%);
+			> div {
+				ul {
+					&:first-child {
+						padding-bottom: 0!important;
+					}
+					&:last-child {
+						padding-top: 0!important;
+					}
+				}
+			}
+		}
+		&#sticker-buttons {
+			background: lighten($slate, 10%);
+			text-align: center;
+			span {
+				margin-top: 5px;
+			}
+		}
+		&.sticker-component {
+			textarea[onclick] {
+				display: block;
+				width: 100%!important;
+			}
+			> h1 {
+				padding-bottom: 10px;
+			}
+			.bg-shamrock + textarea[onclick], .mix-shamrock {
+				background: mix($slate, $shamrock)!important;
+				&:hover, &:focus {
+					background: white!important;
+				}
+			}
+			.bg-azure + textarea[onclick], .mix-azure {
+				background: mix($slate, $azure)!important;
+				&:hover, &:focus {
+					background: white!important;
+				}
+			}
+			.bg-lake + textarea[onclick], .mix-lake {
+				background: mix($slate, $lake)!important;
+				&:hover, &:focus {
+					background: white!important;
+				}
+			}
+			.mix-gold {
+				background: mix($slate, $gold)!important;
+				&:hover, &:focus {
+					background: white!important;
+				}
+			}
+			.mix-campus {
+				background: mix($slate, $campus)!important;
+				&:hover, &:focus {
+					background: white!important;
+				}
+			}
+		}
+		&#sticker-mobile-headers {
+			background: lighten($slate, 13%);
+			.third {
+				height: 192px;
+			}
+		}
+		&#sticker-input {
+			background: lighten($slate, 20%);
+			textarea[onclick] {
+				margin-top: 5px!important;
+			}
+		}
+		&#sticker-lists {
+			background: lighten($slate, 6%);
+			textarea + ul {
+				padding: 1px 0 0;
+			}
+		}
+		&#sticker-progress {
+			background: lighten($slate, 2%);
+			progress {
+				display: block;
+				margin: 0 15px 10px;
+				vertical-align: top;
+				width: calc(100% - 30px);
+			}
+			textarea:not(:last-child) {
+				margin-bottom: 15px;
+			}
+		}
+		&#sticker-picker {
+			background: lighten($slate, 5%);
+			.picker {
+				padding: 0 15px;
+			}
+		}
+		&#sticker-loaders {
+			background: lighten($slate, 25%);
+			svg {
+				display: block;
+				margin: 0 auto;
+			}
+			#checkmark line {
+				@include animation-iteration-count(infinite);
+			}
+		}
+		&#sticker-user-icon {
+			ul {
+				@include listless;
+				width: 100%;
+				li {
+					padding: 0 15px;
+				}
+			}
+		}
+		&#sticker-dropdowns {
+			background: lighten($slate, 4%);
+		}
+		&#sticker-tooltips {
+			background: lighten($slate, 9%);
+		}
+		&#sticker-color-picker {
+			background: lighten($slate, 2%);
+		}
+		&#sticker-school-card {
+			background: lighten($slate, 5%);
+			> section {
+				padding: 0 15px 15px;
+			}
+		}
+		&#sticker-profile-card {
+			background: lighten($slate, 13%);
+			> section {
+				padding: 0 15px 15px;
+			}
+			.pf-card-mini {
+				margin: 0 auto;
+			}
+			textarea + section {
+				padding-top: 15px;
+			}
+		}
+		&#sticker-rating {
+			background: lighten($slate, 9%);
+			.rating-stars {
+				margin: 0 auto 10px;
+				max-width: 150px;
+			}
+		}
+		&#sticker-tag-list {
+			background: lighten($slate, 2%);
+			.tag-list {
+				padding: 0 15px 15px;
+			}
+		}
+		&#sticker-attach-list {
+			background: lighten($slate, 10%);
+		}
+	}
+}
