@@ -35,6 +35,13 @@ function retina() {
  
 $(document).ready(retina);
 
+$(".dropdown-menu a").click(function() {
+    $(this).siblings("div").toggleClass("show");
+});
+$(".dropdown-menu .guru-popup button").click(function() {
+    $(this).parent().parent().parent().parent().removeClass("show");
+});
+
 $(".dropdown a").click(function() {
     $(this).parent().siblings("ul").toggleClass("active");
 });

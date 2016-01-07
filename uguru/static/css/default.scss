@@ -1598,6 +1598,58 @@ button.active, button.activated, button:active, button:hover, button:focus {
 	}
 }
 
+.input-field {
+	&.txt-white {
+		input, label {
+			color: white!important;
+			border-color: white!important;
+			@include placeholder {
+				color: rgba(white,.5);
+			}
+		}
+		input:focus {
+			border-color: white!important;
+			box-shadow: 0 1px 0 0 white!important;
+		}
+	}
+}
+
+.value-input {
+	@include listless;
+	@include flex;
+	@include flex-center-vertical;
+	li {
+		font-weight: 600;
+		&:nth-child(odd) {
+			padding-right: 10px;
+		}
+		&:nth-child(even) {
+			padding-right: 30px;
+		}
+		&:last-child {
+			padding-right: 0;
+		}
+		input {
+			max-width: 50px;
+			background: lighten($slate, 10%);
+			border: 0;
+			color: white;
+			font-size: 32px;
+			font-weight: 700;
+			text-align: center;
+			@include placeholder {
+				color: rgba(white,.5);
+			}
+			&:hover {
+				background: lighten($slate, 15%);
+			}
+			&:focus {
+				background: lighten($slate, 10%);
+			}
+		}
+	}
+}
+
 .input-ghost {
 	display: block;
 	width: 100%;
@@ -1657,6 +1709,32 @@ button.active, button.activated, button:active, button:hover, button:focus {
 	border-color: rgba(white, .2);
 	@include placeholder {
 		color: white;
+	}
+}
+textarea.input-outline {
+	@include transition(.15s ease-in-out);
+	width: 100%;
+	max-width: 800px;
+	min-height: 150px;
+	resize: none;
+	margin: 0 auto;
+	background: rgba(white,.1);
+	border-color: lighten($slate, 40%);
+	color: white;
+	font-size: 18px;
+	font-weight: 400;
+	@include placeholder {
+		color: lighten($slate, 30%);
+	}
+	&:hover {
+		background: rgba(white, .7);
+		border-color: lighten($slate, 30%);
+		color: $slate;
+	}
+	&:focus, &.active {
+		background: white;
+		border-color: $shamrock;
+		color: $slate;
 	}
 }
 
@@ -4635,8 +4713,8 @@ input[type=range] {
 	}
 }
 
-// CHECKBOXES
-.checkbox-container {
+// CHECKBOXES & RADIOS
+.checkbox-container, .radio-container, .round-checkbox-container {
 	@include flex;
 	@include flex-center;
 	div {
@@ -4649,13 +4727,29 @@ input[type=range] {
 			left: 0;
 			width: 100%;
 			height: 100%;
+			margin: 0;
 		}
 		span {
 			display: block;
+			background: $slate;
+			svg {
+				display: block;
+			}
+		}
+	}
+	label {
+		padding-left: 15px;
+		color: white;
+		font-size: 20px;
+		font-weight: 600;
+	}
+}
+.checkbox-container {
+	div {
+		span {
+			border-radius: 3px;
 			width: 32px;
 			height: 32px;
-			border-radius: 3px;
-			background: $slate;
 			svg {
 				@include svg-stroke(lighten($slate, 20%), 10);
 				padding: 4px;
@@ -4670,11 +4764,52 @@ input[type=range] {
 			}
 		}
 	}
-	label {
-		padding-left: 15px;
-		color: white;
-		font-size: 20px;
-		font-weight: 600;
+}
+.radio-container {
+	div {
+		span {
+			@include round;
+			width: 24px;
+			height: 24px;
+			padding: 4px;
+			svg {
+				@include round;
+				background: lighten($slate, 10%);
+				path {
+					display: none;
+				}
+			}
+		}
+		input:checked + span {
+			svg {
+				background: $shamrock;
+			}
+		}
+	}
+}
+.round-checkbox-container {
+	div, input {
+		width: 50px!important;
+		height: 50px!important;
+	}
+	svg {
+		@include svg-stroke(white, 6);
+		width: 50px;
+		height: 50px;
+		path {
+			stroke: white;
+		}
+		circle {
+			fill: $charcoal;
+		}
+	}
+	input:checked + svg {
+		path {
+			stroke: $charcoal;
+		}
+		circle {
+			fill: white;
+		}
 	}
 }
 
@@ -4939,6 +5074,149 @@ input[type=range] {
 	}
 }
 
+// HIGHLIGHT BAR
+.highlight-bar {
+	ul {
+		@include listless;
+		@include flex;
+		@include flex-wrap;
+		-webkit-justify-content: flex-end;
+		justify-content: flex-end;
+		width: 100%;
+		padding: 15px;
+		li {
+			display: block;
+			border: 0;
+			a {
+				display: block;
+				padding: 15px;
+				font-size: 20px;
+				font-weight: 700;
+				&.active {
+					background: rgba(white,.9);
+					color: $orange;
+				}
+				&:hover, &:focus {
+					background: white;
+					color: $lake;
+				}
+			}
+		}
+	}
+}
+
+// DROPDOWN MENU
+.dropdown-menu-link {
+	@include flex;
+	@include flex-center;
+	width: 90px;
+	height: 64px;
+	span {
+		@include round;
+		background-position: center center;
+		background-size: cover;
+		display: block;
+		width: 40px;
+		height: 40px;
+		border: 3px solid white;
+	}
+	svg {
+		@include svg-stroke(white, 14);
+		width: 50px;
+		height: 50px;
+		padding: 15px;
+	}
+}
+.dropdown-menu {
+	position: relative;
+	background: $shamrock;
+	ul {
+		@include listless;
+		background: rgba(white,.3);
+		min-width: 250px;
+		li {
+			.guru-popup {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				max-width: none;
+				height: 100%;
+				padding: 0;
+				background: rgba(lighten($slate, 10%),.9);
+				h2 {
+					width: 100%;
+					font-size: 20px;
+					font-weight: 600;
+					text-align: center;
+				}
+				div {
+					width: 100%!important;
+					background: none!important;
+				}
+				> div {
+					@include flex;
+					@include flex-wrap;
+					@include flex-center;
+					height: 100%;
+					> div {
+						@include flex;
+						@include flex-wrap;
+						height: auto!important;
+					}
+				}
+			}
+			a {
+				@include flex;
+				@include flex-center;
+				padding: 15px;
+				height: 50px;
+				font-size: 18px;
+				font-weight: 600;
+				text-transform: uppercase;
+				span {
+					display: block;
+					text-align: left;
+					width: calc(100% - 35px);
+				}
+				svg {
+					@include svg-stroke(white, 5);
+					display: block;
+					padding: 5px;
+					height: 50px;
+					width: 50px;
+					margin-right: -15px;
+				}
+				&:hover, &:active, &:focus {
+					background: white;
+					span {
+						color: $shamrock;
+					}
+					svg {
+						stroke: $shamrock;
+					}
+				}
+			}
+			&:last-child {
+				a {
+					background: rgba(white,.75);
+					span {
+						color: $shamrock;
+					}
+					svg {
+						stroke: $shamrock;
+					}
+				}
+				&:hover, &:active, &:focus {
+					background: white;
+				}
+			}
+		}
+	}
+}
+
+
+// KEYFRAME ANIMATION
 @include keyframes(courses-pop) {
 	0% {
 		@include opacity(0);

@@ -367,8 +367,21 @@ body {
   background: #6f7d82;
 }
 
-#sticker-sheet .sticker-section#sticker-input textarea[onclick] {
-  margin-top: 5px !important;
+#sticker-sheet .sticker-section#sticker-input .input-field-container {
+  padding: 0 15px;
+}
+
+#sticker-sheet .sticker-section#sticker-input .input-field {
+  margin-top: 0 !important;
+}
+
+#sticker-sheet .sticker-section#sticker-input .input-outline {
+  margin: 15px;
+  width: calc(100% - 30px) !important;
+}
+
+#sticker-sheet .sticker-section#sticker-input .value-input {
+  padding: 15px;
 }
 
 #sticker-sheet .sticker-section#sticker-lists {
@@ -484,4 +497,44 @@ body {
 
 #sticker-sheet .sticker-section#sticker-attach-list {
   background: #576267;
+}
+
+#sticker-sheet .sticker-section#sticker-highlight-bar {
+  background: #6f7d82;
+}
+
+#sticker-sheet .sticker-section#sticker-dropdown-menu .dropdown-menu-link {
+  margin: 0 auto;
+}
+
+#sticker-sheet .sticker-section#sticker-form-elements {
+  background: #667277;
+}
+
+#sticker-sheet .sticker-section#sticker-form-elements .checkbox-container {
+  padding: 0 15px 15px;
+}
+
+#sticker-sheet .sticker-section#sticker-form-elements .radio-container {
+  padding: 15px;
+}
+
+#sticker-sheet .sticker-section#sticker-form-elements .round-checkbox-container {
+  padding: 10px 15px;
+}
+
+#sticker-sheet .sticker-section#sticker-form-elements .round-checkbox-container svg circle {
+  fill: none;
+}
+
+#sticker-sheet .sticker-section#sticker-form-elements .round-checkbox-container input:checked + svg circle {
+  fill: white;
+}
+
+#sticker-sheet .sticker-section#sticker-form-elements .round-checkbox-container input:checked + svg path {
+  stroke: #667277;
+}
+
+.hiddendiv.common {
+  display: none;
 }

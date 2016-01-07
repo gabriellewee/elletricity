@@ -448,10 +448,32 @@
             </section>
         </article>
         <article id="sticker-input" class="sticker-component sticker-small sticker-section">
-            <h1>Inputs</h1>
+            <h1>Inputs &amp; Textareas</h1>
             <section>
+				<div class="input-field-container">
+					<div class="input-field txt-white">
+						<input id="material-input" type="text"/>
+						<label for="material-input">Material Input</label>
+					</div>
+				</div>
+<textarea readonly="true" onclick="this.select()" rows="6"><div class="input-field-container">
+&nbsp;&nbsp;&nbsp;&nbsp;<div class="input-field txt-white">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input id="material-input" type="text"/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label for="material-input">Material Input</label>
+&nbsp;&nbsp;&nbsp;&nbsp;</div>
+</div></textarea>
                 <input class="full-x input-outline" type="text" value="input-outline"/>
-                <textarea readonly="true" onclick="this.select()" rows="1"><input class="full-x input-outline" type="text" value="input-outline"/></textarea>
+				<textarea readonly="true" onclick="this.select()" rows="1"><input class="full-x input-outline" type="text" value="input-outline"/></textarea>
+				<textarea class="input-outline">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</textarea>
+				<textarea readonly="true" onclick="this.select()" rows="1"><textarea class="input-outline">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</textarea></textarea>
+				<ul class="value-input">
+					<li><input type="tel" placeholder="0"/></li>
+					<li>hours</li>
+				</ul>
+<textarea readonly="true" onclick="this.select()" rows="4"><ul class="value-input">
+&nbsp;&nbsp;&nbsp;&nbsp;<li><input type="tel" placeholder="0"/></li>
+&nbsp;&nbsp;&nbsp;&nbsp;<li>hours</li>
+</ul></textarea>
             </section>
         </article>
         <article id="sticker-lists" class="sticker-mobile sticker-component sticker-small sticker-section">
@@ -772,7 +794,7 @@
 						</div>
 						<div class="school-card-main">
 							<div class="school-card-map">
-								<img src="https://maps.googleapis.com/maps/apistaticmap?center=(37.8718992,%20-122.2585399)&parameters&size=800x800&zoom=14"/>
+								<img src="https://maps.googleapis.com/maps/api/staticmap?center=(37.8718992,%20-122.2585399)&parameters&size=800x800&zoom=14"/>
 							</div>
 							<div class="school-card-color" style="background-color: #003262;"></div>
 							<div class="school-card-info" style="color: #003262;">
@@ -832,7 +854,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;</div>
 &nbsp;&nbsp;&nbsp;&nbsp;<div class="school-card-main">
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<div class="school-card-map">
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://maps.googleapis.com/maps/apistaticmap?center=(37.8718992,%20-122.2585399)&parameters&size=800x800&zoom=14"/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://maps.googleapis.com/maps/api/staticmap?center=(37.8718992,%20-122.2585399)&parameters&size=800x800&zoom=14"/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<div class="school-card-color" style="background-color: #003262;"></div>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<div class="school-card-info" style="color: #003262;">
@@ -1392,6 +1414,209 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<li><a>Link 3</a></li>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<li><a>Link 4</a></li>
 &nbsp;&nbsp;&nbsp;&nbsp;</ul>
+</div></textarea>
+		</article>
+		<article id="sticker-highlight-bar" class="sticker-component sticker-small sticker-section">
+			<h1>Highlight Bar</h1>
+			<div class="uguru highlight-bar">
+				<ul>
+					<li><a>Link 1</a></li>
+					<li><a>Link 2</a></li>
+					<li><a>Link 3</a></li>
+					<li><a class="active">Link 4</a></li>
+				</ul>
+        	</div>
+<textarea readonly="true" onclick="this.select()" rows="8"><div class="tab-bar">
+&nbsp;&nbsp;&nbsp;&nbsp;<ul>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<li><a>Link 1</a></li>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<li><a>Link 2</a></li>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<li><a>Link 3</a></li>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<li class="active"><a>Link 4</a></li>
+&nbsp;&nbsp;&nbsp;&nbsp;</ul>
+</div></textarea>
+		</article>
+		<article id="sticker-dropdown-menu" class="sticker-component sticker-small sticker-section">
+			<h1>Dropdown Menu</h1>
+			<a class="dropdown-menu-link">
+				<span style="background-image: url(static/images/icon.jpg)"></span>
+				<svg viewBox="0 0 100 100">
+					<path d="M14,32 L50,68 L86,32"></path>
+				</svg>
+			</a>
+			<nav class="dropdown-menu">
+				<ul>
+					<li>
+						<a>
+							<span>Link 1</span>
+							<svg viewBox="0 0 100 100">
+						        <circle cx="50" cy="50" r="36"></circle>
+						        <path d="M50,50 L50,31.5643475 L50,50 L31.5643475,50 L50,50 Z M50,50 L50,68.4356525 L50,50 L68.4356525,50 L50,50 Z"></path>
+							</svg>
+						</a>
+					</li>
+					<li>
+						<a>
+							<span>Link 2</span>
+							<svg viewBox="0 0 100 100">
+						        <circle cx="50" cy="50" r="36"></circle>
+						        <path d="M50,50 L50,31.5643475 L50,50 L31.5643475,50 L50,50 Z M50,50 L50,68.4356525 L50,50 L68.4356525,50 L50,50 Z"></path>
+							</svg>
+						</a>
+					</li>
+					<li>
+						<a>
+							<span>Link 3</span>
+							<svg viewBox="0 0 100 100">
+						        <circle cx="50" cy="50" r="36"></circle>
+						        <path d="M50,50 L50,31.5643475 L50,50 L31.5643475,50 L50,50 Z M50,50 L50,68.4356525 L50,50 L68.4356525,50 L50,50 Z"></path>
+							</svg>
+						</a>
+					</li>
+					<li>
+						<a>
+							<span>Logout</span>
+							<svg viewBox="0 0 100 100">
+						        <circle cx="50" cy="50" r="36"></circle>
+						        <path d="M50,50 L50,31.5643475 L50,50 L31.5643475,50 L50,50 Z M50,50 L50,68.4356525 L50,50 L68.4356525,50 L50,50 Z"></path>
+							</svg>
+						</a>
+						<div class="guru-popup hide">
+							<div>
+								<div>
+									<h2>Are you sure you want to logout?</h2>
+									<div class='button-group'>
+										<button class="button-group-cancel">No</button>
+										<button>Yes</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</nav>
+<textarea readonly="true" onclick="this.select()" rows="6"><a class="dropdown-menu-link">
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="background-image: url(static/images/icon.jpg)"></span>
+&nbsp;&nbsp;&nbsp;&nbsp;<svg viewBox="0 0 100 100">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<path d="M14,32 L50,68 L86,32"></path>
+&nbsp;&nbsp;&nbsp;&nbsp;</svg>
+</a></textarea>
+<textarea readonly="true" onclick="this.select()" rows="6"><nav class="dropdown-menu">
+&nbsp;&nbsp;&nbsp;&nbsp;<ul>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<li>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>Link 1</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<svg viewBox="0 0 100 100">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<circle cx="50" cy="50" r="36"></circle>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<path d="M50,50 L50,31.5643475 L50,50 L31.5643475,50 L50,50 Z M50,50 L50,68.4356525 L50,50 L68.4356525,50 L50,50 Z"></path>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</svg>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<li>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>Link 2</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<svg viewBox="0 0 100 100">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<circle cx="50" cy="50" r="36"></circle>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<path d="M50,50 L50,31.5643475 L50,50 L31.5643475,50 L50,50 Z M50,50 L50,68.4356525 L50,50 L68.4356525,50 L50,50 Z"></path>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</svg>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<li>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>Link 3</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<svg viewBox="0 0 100 100">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<circle cx="50" cy="50" r="36"></circle>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<path d="M50,50 L50,31.5643475 L50,50 L31.5643475,50 L50,50 Z M50,50 L50,68.4356525 L50,50 L68.4356525,50 L50,50 Z"></path>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</svg>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<li>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>Logout</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<svg viewBox="0 0 100 100">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<circle cx="50" cy="50" r="36"></circle>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<path d="M50,50 L50,31.5643475 L50,50 L31.5643475,50 L50,50 Z M50,50 L50,68.4356525 L50,50 L68.4356525,50 L50,50 Z"></path>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</svg>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<div class="guru-popup hide">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<div>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<div>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<h2>Are you sure you want to logout?</h2>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<div class='button-group'>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button class="button-group-cancel">No</button>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button>Yes</button>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+&nbsp;&nbsp;&nbsp;&nbsp;</ul>
+</nav></textarea>
+		</article>
+		<article id="sticker-form-elements" class="sticker-component sticker-small sticker-section">
+			<h1>Form Elements</h1>
+			<div class="uguru checkbox-container">
+				<div>
+					<input type="checkbox" id="checkbox-item"/>
+					<span>
+						<svg viewBox="0 0 100 100">
+							<path d="M14,54.2352941 L35.1764706,75.4117647 L86,24.5882353"></path>
+						</svg>
+					</span>
+				</div>
+				<label for="checkbox-item">Checkbox Item</label>
+			</div>
+<textarea readonly="true" onclick="this.select()" rows="11"><div class="checkbox-container">
+&nbsp;&nbsp;&nbsp;&nbsp;<div>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" id="checkbox-item"/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<svg viewBox="0 0 100 100">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<path d="M14,54.2352941 L35.1764706,75.4117647 L86,24.5882353"></path>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</svg>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+&nbsp;&nbsp;&nbsp;&nbsp;</div>
+&nbsp;&nbsp;&nbsp;&nbsp;<label for="checkbox-item">Checkbox Item</label>
+</div></textarea>
+			<div class="uguru radio-container">
+				<div>
+					<input type="radio" id="radio-item" />
+					<span>
+						<svg viewBox="0 0 100 100">
+							<path d="M14,54.2352941 L35.1764706,75.4117647 L86,24.5882353"></path>
+						</svg>
+					</span>
+				</div>
+				<label for="radio-item">Radio Item</label>
+			</div>
+<textarea readonly="true" onclick="this.select()" rows="11"><div class="radio-container">
+&nbsp;&nbsp;&nbsp;&nbsp;<div>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="radio-item" />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<svg viewBox="0 0 100 100">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<path d="M14,54.2352941 L35.1764706,75.4117647 L86,24.5882353"></path>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</svg>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+&nbsp;&nbsp;&nbsp;&nbsp;</div>
+&nbsp;&nbsp;&nbsp;&nbsp;<label for="radio-item">Radio Item</label>
+</div></textarea>
+			<div class="uguru round-checkbox-container">
+				<div>
+					<input type="checkbox" id="round-checkbox-item" />
+					<svg viewBox="0 0 100 100">
+	                    <circle cx="50" cy="50" r="36"></circle>
+	                    <path d="M31,52.6470588 L42.1764706,63.8235294 L69,37"></path>
+	                </svg>
+				</div>
+				<label for="round-checkbox-item">Round Checkbox</label>
+			</div>
+<textarea readonly="true" onclick="this.select()" rows="10"><div class="uguru round-checkbox-container">
+&nbsp;&nbsp;&nbsp;&nbsp;<div>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" id="round-checkbox-item" />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<svg viewBox="0 0 100 100">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<circle cx="50" cy="50" r="36"></circle>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<path d="M31,52.6470588 L42.1764706,63.8235294 L69,37"></path>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</svg>
+&nbsp;&nbsp;&nbsp;&nbsp;</div>
+&nbsp;&nbsp;&nbsp;&nbsp;<label for="round-checkbox-item">Round Checkbox</label>
 </div></textarea>
 		</article>
     </main>

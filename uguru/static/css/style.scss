@@ -267,8 +267,18 @@ body {
 		}
 		&#sticker-input {
 			background: lighten($slate, 20%);
-			textarea[onclick] {
-				margin-top: 5px!important;
+			.input-field-container {
+				padding: 0 15px;
+			}
+			.input-field {
+				margin-top: 0!important;
+			}
+			.input-outline {
+				margin: 15px;
+				width: calc(100% - 30px)!important;
+			}
+			.value-input {
+				padding: 15px;
 			}
 		}
 		&#sticker-lists {
@@ -357,5 +367,42 @@ body {
 		&#sticker-attach-list {
 			background: lighten($slate, 10%);
 		}
+		&#sticker-highlight-bar {
+			background: lighten($slate, 20%);
+		}
+		&#sticker-dropdown-menu {
+			.dropdown-menu-link {
+				margin: 0 auto;
+			}
+		}
+		&#sticker-form-elements {
+			background: lighten($slate, 16%);
+			.checkbox-container {
+				padding: 0 15px 15px;
+			}
+			.radio-container {
+				padding: 15px;
+			}
+			.round-checkbox-container {
+				padding: 10px 15px;
+				svg {
+					circle {
+						fill: none;
+					}
+				}
+				input:checked + svg {
+					circle {
+						fill: white;
+					}
+					path {
+						stroke: lighten($slate, 16%);
+					}
+				}
+			}
+		}
 	}
+}
+
+.hiddendiv.common {
+	display: none;
 }

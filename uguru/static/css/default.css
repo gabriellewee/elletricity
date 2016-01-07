@@ -2010,6 +2010,97 @@ button.active, button.activated, button:active, button:hover, button:focus {
   color: white;
 }
 
+.input-field.txt-white input, .input-field.txt-white label {
+  color: white !important;
+  border-color: white !important;
+}
+
+.input-field.txt-white input::-webkit-input-placeholder, .input-field.txt-white label::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.input-field.txt-white input:-moz-placeholder, .input-field.txt-white label:-moz-placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.input-field.txt-white input::-moz-placeholder, .input-field.txt-white label::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.input-field.txt-white input:-ms-input-placeholder, .input-field.txt-white label:-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.input-field.txt-white input:focus {
+  border-color: white !important;
+  box-shadow: 0 1px 0 0 white !important;
+}
+
+.value-input {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  -ms-box-orient: horizontal;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.value-input li {
+  font-weight: 600;
+}
+
+.value-input li:nth-child(odd) {
+  padding-right: 10px;
+}
+
+.value-input li:nth-child(even) {
+  padding-right: 30px;
+}
+
+.value-input li:last-child {
+  padding-right: 0;
+}
+
+.value-input li input {
+  max-width: 50px;
+  background: #576267;
+  border: 0;
+  color: white;
+  font-size: 32px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.value-input li input::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.value-input li input:-moz-placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.value-input li input::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.value-input li input:-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.value-input li input:hover {
+  background: #637074;
+}
+
+.value-input li input:focus {
+  background: #576267;
+}
+
 .input-ghost {
   display: block;
   width: 100%;
@@ -2152,6 +2243,52 @@ button.active, button.activated, button:active, button:hover, button:focus {
 
 .input-outline:active:-ms-input-placeholder, .input-outline:focus:-ms-input-placeholder {
   color: white;
+}
+
+textarea.input-outline {
+  -webkit-transition: all 0.15s ease-in-out;
+  -o-transition: all 0.15s ease-in-out;
+  -ms-transition: all 0.15s ease-in-out;
+  -moz-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
+  width: 100%;
+  max-width: 800px;
+  min-height: 150px;
+  resize: none;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #a5afb2;
+  color: white;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+textarea.input-outline::-webkit-input-placeholder {
+  color: #89969b;
+}
+
+textarea.input-outline:-moz-placeholder {
+  color: #89969b;
+}
+
+textarea.input-outline::-moz-placeholder {
+  color: #89969b;
+}
+
+textarea.input-outline:-ms-input-placeholder {
+  color: #89969b;
+}
+
+textarea.input-outline:hover {
+  background: rgba(255, 255, 255, 0.7);
+  border-color: #89969b;
+  color: #40484B;
+}
+
+textarea.input-outline:focus, textarea.input-outline.active {
+  background: white;
+  border-color: #69B3A5;
+  color: #40484B;
 }
 
 input[type=text].input-outline {
@@ -6311,7 +6448,7 @@ input[type=range]:focus::-ms-fill-upper {
   background: #cfe6e2;
 }
 
-.checkbox-container {
+.checkbox-container, .radio-container, .round-checkbox-container {
   -ms-box-orient: horizontal;
   display: -webkit-box;
   display: -moz-box;
@@ -6327,11 +6464,11 @@ input[type=range]:focus::-ms-fill-upper {
   justify-content: center;
 }
 
-.checkbox-container div {
+.checkbox-container div, .radio-container div, .round-checkbox-container div {
   position: relative;
 }
 
-.checkbox-container div input {
+.checkbox-container div input, .radio-container div input, .round-checkbox-container div input {
   filter: alpha(opacity=0);
   opacity: 0;
   position: absolute;
@@ -6340,14 +6477,29 @@ input[type=range]:focus::-ms-fill-upper {
   left: 0;
   width: 100%;
   height: 100%;
+  margin: 0;
+}
+
+.checkbox-container div span, .radio-container div span, .round-checkbox-container div span {
+  display: block;
+  background: #40484B;
+}
+
+.checkbox-container div span svg, .radio-container div span svg, .round-checkbox-container div span svg {
+  display: block;
+}
+
+.checkbox-container label, .radio-container label, .round-checkbox-container label {
+  padding-left: 15px;
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
 }
 
 .checkbox-container div span {
-  display: block;
+  border-radius: 3px;
   width: 32px;
   height: 32px;
-  border-radius: 3px;
-  background: #40484B;
 }
 
 .checkbox-container div span svg {
@@ -6369,11 +6521,55 @@ input[type=range]:focus::-ms-fill-upper {
   stroke: white;
 }
 
-.checkbox-container label {
-  padding-left: 15px;
-  color: white;
-  font-size: 20px;
-  font-weight: 600;
+.radio-container div span {
+  border-radius: 1000px;
+  width: 24px;
+  height: 24px;
+  padding: 4px;
+}
+
+.radio-container div span svg {
+  border-radius: 1000px;
+  background: #576267;
+}
+
+.radio-container div span svg path {
+  display: none;
+}
+
+.radio-container div input:checked + span svg {
+  background: #69B3A5;
+}
+
+.round-checkbox-container div, .round-checkbox-container input {
+  width: 50px !important;
+  height: 50px !important;
+}
+
+.round-checkbox-container svg {
+  fill: none;
+  stroke: white;
+  stroke-width: 6px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  width: 50px;
+  height: 50px;
+}
+
+.round-checkbox-container svg path {
+  stroke: white;
+}
+
+.round-checkbox-container svg circle {
+  fill: #2B3234;
+}
+
+.round-checkbox-container input:checked + svg path {
+  stroke: #2B3234;
+}
+
+.round-checkbox-container input:checked + svg circle {
+  fill: white;
 }
 
 .cal-week > div {
@@ -6745,6 +6941,225 @@ input[type=range]:focus::-ms-fill-upper {
   .course-list li a {
     height: 87px;
   }
+}
+
+.highlight-bar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  -ms-box-orient: horizontal;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: flex;
+  -ms-flex-flow: row wrap;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+  width: 100%;
+  padding: 15px;
+}
+
+.highlight-bar ul li {
+  display: block;
+  border: 0;
+}
+
+.highlight-bar ul li a {
+  display: block;
+  padding: 15px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.highlight-bar ul li a.active {
+  background: rgba(255, 255, 255, 0.9);
+  color: #E5753C;
+}
+
+.highlight-bar ul li a:hover, .highlight-bar ul li a:focus {
+  background: white;
+  color: #50A5DD;
+}
+
+.dropdown-menu-link {
+  -ms-box-orient: horizontal;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  width: 90px;
+  height: 64px;
+}
+
+.dropdown-menu-link span {
+  border-radius: 1000px;
+  background-position: center center;
+  background-size: cover;
+  display: block;
+  width: 40px;
+  height: 40px;
+  border: 3px solid white;
+}
+
+.dropdown-menu-link svg {
+  fill: none;
+  stroke: white;
+  stroke-width: 14px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  width: 50px;
+  height: 50px;
+  padding: 15px;
+}
+
+.dropdown-menu {
+  position: relative;
+  background: #69B3A5;
+}
+
+.dropdown-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background: rgba(255, 255, 255, 0.3);
+  min-width: 250px;
+}
+
+.dropdown-menu ul li .guru-popup {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-width: none;
+  height: 100%;
+  padding: 0;
+  background: rgba(87, 98, 103, 0.9);
+}
+
+.dropdown-menu ul li .guru-popup h2 {
+  width: 100%;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.dropdown-menu ul li .guru-popup div {
+  width: 100% !important;
+  background: none !important;
+}
+
+.dropdown-menu ul li .guru-popup > div {
+  -ms-box-orient: horizontal;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: flex;
+  -ms-flex-flow: row wrap;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.dropdown-menu ul li .guru-popup > div > div {
+  -ms-box-orient: horizontal;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: flex;
+  -ms-flex-flow: row wrap;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  height: auto !important;
+}
+
+.dropdown-menu ul li a {
+  -ms-box-orient: horizontal;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  padding: 15px;
+  height: 50px;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.dropdown-menu ul li a span {
+  display: block;
+  text-align: left;
+  width: calc(100% - 35px);
+}
+
+.dropdown-menu ul li a svg {
+  fill: none;
+  stroke: white;
+  stroke-width: 5px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  display: block;
+  padding: 5px;
+  height: 50px;
+  width: 50px;
+  margin-right: -15px;
+}
+
+.dropdown-menu ul li a:hover, .dropdown-menu ul li a:active, .dropdown-menu ul li a:focus {
+  background: white;
+}
+
+.dropdown-menu ul li a:hover span, .dropdown-menu ul li a:active span, .dropdown-menu ul li a:focus span {
+  color: #69B3A5;
+}
+
+.dropdown-menu ul li a:hover svg, .dropdown-menu ul li a:active svg, .dropdown-menu ul li a:focus svg {
+  stroke: #69B3A5;
+}
+
+.dropdown-menu ul li:last-child a {
+  background: rgba(255, 255, 255, 0.75);
+}
+
+.dropdown-menu ul li:last-child a span {
+  color: #69B3A5;
+}
+
+.dropdown-menu ul li:last-child a svg {
+  stroke: #69B3A5;
+}
+
+.dropdown-menu ul li:last-child:hover, .dropdown-menu ul li:last-child:active, .dropdown-menu ul li:last-child:focus {
+  background: white;
 }
 
 @-webkit-keyframes courses-pop {
