@@ -1,0 +1,602 @@
+@import 'mixin';
+
+/* Reset */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0} 
+*, *:before, *:after { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+*, *:focus {
+	outline: none!important;
+}
+body {
+	font: 16px $font;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+	color: $slate;
+}
+a {
+	color: $grey;
+	&:hover, &:focus {
+		color: $slate;
+	}
+	&:active {
+		color: $robin;
+	}
+	&.social-in {
+		background: $instagram;
+		&:hover, &:focus {
+			background: mix($instagram, white);
+			color: mix($instagram, $slate);
+		}
+		&:active {
+			background: mix($instagram, $slate);
+			color: white;
+		}
+	}
+	&.social-tw {
+		background: $twitter;
+		&:hover, &:focus {
+			background: mix($twitter, white);
+			color: mix($twitter, $slate);
+		}
+		&:active {
+			background: mix($twitter, $slate);
+			color: white;
+		}
+	}
+	&.social-fb {
+		background: $facebook;
+		&:hover, &:focus {
+			background: mix($facebook, white);
+			color: mix($facebook, $slate);
+		}
+		&:active {
+			background: mix($facebook, $slate);
+			color: white;
+		}
+	}
+	&.social-yt {
+		background: $youtube;
+		&:hover, &:focus {
+			background: mix($youtube, white);
+			color: mix($youtube, $slate);
+		}
+		&:active {
+			background: mix($youtube, $slate);
+			color: white;
+		}
+	}
+	&.social-vm {
+		background: $vimeo;
+		&:hover, &:focus {
+			background: mix($vimeo, white);
+			color: mix($vimeo, $slate);
+		}
+		&:active {
+			background: mix($vimeo, $slate);
+			color: white;
+		}
+	}
+}
+img {
+	max-width: 100%;
+}
+input, textarea {
+	@include appearance;
+	font-size: 16px;
+	font-family: $font;
+	border: 0;
+	border-radius: 2px;
+	color: $slate;
+	min-width: 225px;
+	margin: 0;
+	@include placeholder {
+		color: $grey;
+	}
+	&:focus {
+		@include placeholder {
+			color: mix($grey, $slate);
+		}
+	}
+}
+input {
+	height: $padding*4;
+	padding: 0 $padding;
+}
+.textarea-container {
+	width: 100%;
+	textarea {
+		padding: $padding;
+		width: 100%;
+		height: 200px;
+	}
+}
+.button-container {
+	width: 100%;
+}
+button {
+	@include appearance;
+	height: $padding*4;
+	padding: 0 $padding;
+	font-size: 16px;
+	font-family: $font;
+	border: 0;
+	background: $robin;
+	color: white;
+	font-weight: 500;
+	border-radius: 2px;
+	cursor: pointer;
+	&:hover, &:focus {
+		background: $grey;
+	}
+	&:active {
+		background: $slate;
+	}
+}
+.select-container {
+	@include flex;
+	position: relative;
+	background: white;
+	border-radius: 2px;
+	select {
+		@include appearance;
+		position: relative;
+		z-index: 1;
+		border: 0;
+		width: 225px;
+		height: $padding*4;
+		padding: 0 $padding;
+		font-family: $font;
+		font-size: 16px;
+		background: transparent;
+		cursor: pointer;
+	}
+	label {
+		position: absolute;
+		right: $padding;
+		top: 50%;
+		z-index: 0;
+		@include prefix(transform, translateY(-50%), webkit moz ms o);
+	}
+}
+
+footer {
+	text-align: center;
+	padding: ($padding*2) 0 ($padding*3);
+	font-size: 12px;
+}
+
+header {
+	@include flex;
+	@include flex-center;
+	max-width: 1000px;
+	margin: 0 auto $padding*2;
+	padding: $padding*2 $padding $padding*3;
+	position: relative;
+	&:after {
+		@include round;
+		content: "";
+		display: block;
+		position: absolute;
+		bottom: -1px;
+		left: 0;
+		width: 100%;
+		height: 2px;
+		background: rgba($grey, .2);
+	}
+	 a {
+		display: block;
+		text-decoration: none;
+		svg {
+			height: 200px;
+		}
+		h1 {
+			color: $slate;
+			font-size: 48px;
+			font-family: "Arkhip", sans-serif;
+			text-transform: uppercase;
+		}
+		&:hover, &:focus {
+			h1 {
+				color: $grey;
+			}
+			svg {
+				* {
+					fill: $grey;
+				}
+			}
+		}
+		&:active {
+			h1 {
+				color: $robin;
+			}
+			svg {
+				* {
+					fill: $robin;
+				}
+			}
+		}
+	}
+	> div {
+		margin-left: $padding*2;
+		> nav {
+			@include flex;
+			position: relative;
+			width: 100%;
+			a {
+				display: block;
+				padding: $padding;
+				border-radius: 2px;
+				color: $slate;
+				font-weight: 500;
+				text-align: center;
+				text-transform: uppercase;
+				&.active {
+					background: rgba($grey, .1);
+				}
+				&:hover, &:focus {
+					background: $robin;
+					color: white;
+				}
+				&:active {
+					background: $slate;
+					color: white;
+				}
+			}
+		}
+	}
+}
+
+main {
+	@include flex;
+	@include flex-wrap;
+	max-width: 1024px;
+	margin: 0 auto;
+	h2 {
+		font-size: 20px;
+		font-weight: 700;
+		text-transform: uppercase;
+	}
+	> aside {
+		width: calc(100% / 3);
+		h2 {
+			padding: $padding $padding 0;
+			a {
+				display: block;
+				text-decoration: none;
+				color: $slate;
+			}
+			#{$links} {
+				color: $grey;
+			}
+		}
+		#instagram-grid {
+			@include listless;
+			@include flex;
+			@include flex-wrap;
+			@include flex-center;
+			padding: $padding/2;
+			li {
+				width: calc(100% / 3);
+				padding: $padding/2;
+				a {
+					display: block;
+				}
+				img {
+					display: block;
+					width: 100%;
+					border: 2px solid $slate;
+					border-radius: 2px;
+				}
+			}
+		}
+		.social-links {
+			@include listless;
+			padding: $padding/2;
+			li {
+				padding: $padding/2;
+				a {
+					display: block;
+					border-radius: 2px;
+					padding: $padding;
+					color: white;
+					text-align: center;
+					text-decoration: none;
+					font-weight: 700;
+				}
+			}
+		}
+	}
+	> section {
+		width: calc(100% / 3 * 2);
+		padding: $padding;
+		&:only-child {
+			width: 100%;
+		}
+		img {
+			margin-top: $padding;
+			border-radius: 2px;
+		}
+		p {
+			margin-top: $padding;
+			line-height: 1.2;
+			img {
+				margin-top: 0;
+			}
+		}
+		&.shop-page {
+			padding: 0;
+			.shop-nav {
+				ul {
+					@include listless;
+					@include flex;
+					@include flex-center;
+					padding: 0 $padding;
+					li {
+						position: relative;
+						padding: 0 $padding;
+						&:not(:last-child) {
+							&:after {
+								@include round;
+								content: "";
+								display: block;
+								position: absolute;
+								top: 0;
+								right: 1px;
+								width: 2px;
+								height: 100%;
+								background: rgba($grey, .2);
+							}
+						}
+						a {
+							text-decoration: none;
+							&:hover, &:focus {
+								color: $robin;
+							}
+							&:active {
+								color: $slate;
+							}
+							&.active {
+								color: $slate;
+							}
+						}
+					}
+				}
+			}
+			.shop-grid {
+				margin: 0 (-$padding);
+				ul {
+					@include listless;
+					@include flex;
+					@include flex-wrap;
+					@include flex-center;
+					padding: $padding;
+					li {
+						width: calc(100% / 3);
+						padding: $padding;
+						> a {
+							display: block;
+							text-align: center;
+							text-decoration: none;
+							> div {
+								position: relative;
+								svg {
+									display: block;
+									width: 100%;
+								}
+								> div {
+									-webkit-filter: grayscale(100%);
+		    						filter: grayscale(100%);
+									position: absolute;
+									top: 0;
+									left: 0;
+									width: 100%;
+									height: 100%;
+									background-size: cover;
+									background-position: center;
+									border-radius: 2px;
+								}
+							}
+							h3, h4 {
+								color: $slate;
+							}
+							h3 {
+								margin-top: $padding/2;
+								font-size: 18px;
+							}
+							h4 {
+								@include opacity(.5);
+								margin-top: $padding/4;
+								font-size: 14px;
+								font-weight: 700;
+							}
+							&:hover, &:focus {
+								> div {
+									> div {
+										-webkit-filter: grayscale(0%);
+			    						filter: grayscale(0%);
+									}
+								}
+								h3, h4 {
+									color: $grey;
+								}
+							}
+							&:active {
+								> div {
+									> div {
+										-webkit-filter: grayscale(50%);
+			    						filter: grayscale(50%);
+									}
+								}
+								h3, h4 {
+									color: $robin;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		&.shop-item {
+			@include flex;
+			@include flex-wrap;
+			padding: $padding/2;
+			> div {
+				padding: $padding/2;
+				&:not(:last-child) {
+					width: 50%;
+				}
+				&:last-child {
+					width: 100%;
+				}
+				ul, ol {
+					padding-left: $padding*3;
+				}
+				p, ul, ol {
+					&:not(:first-child) {
+						padding-top: $padding;
+					}
+				}
+				> div {
+					position: relative;
+				}
+				img {
+					display: block;
+					margin-top: 0;
+					width: 100%;
+				}
+				h1 {
+					font-size: 28px;
+					font-weight: 700;
+				}
+				h2 {
+					margin-top: $padding;
+				}
+				form {
+					@include flex;
+					@include flex-wrap;
+					margin-top: $padding;
+					background: rgba($grey, .2);
+					padding: $padding*2;
+					border-radius: 2px;
+					h3 {
+						width: 100%;
+						margin-bottom: $padding/2;
+						font-weight: 500;
+					}
+					.select-container, input {
+						margin-bottom: $padding*2;
+					}
+					button {
+						display: block;
+					}
+				}
+			}
+		}
+	}
+	.error {
+		width: 100%;
+		text-align: center;
+		font-size: 28px;
+	}
+	.subscribe {
+		background: rgba($grey, .2);
+		border-radius: 2px;
+		&:not(:first-child) {
+			margin-top: $padding*2;
+			padding: $padding*2;
+			text-align: center;
+			form {
+				@include flex-center;
+			}
+		}
+		&:first-child {
+			padding: $padding;
+			h2 {
+				padding: $padding $padding 0;
+			}
+		}
+		form {
+			@include flex;
+			@include flex-wrap;
+			padding: $padding/2;
+			div {
+				padding: $padding/2;
+				&.textarea-container {
+					+ div button {
+						display: block;
+						margin: 0 auto;
+						width: 200px;
+					}
+				}
+			}
+		}
+	}
+	.badge {
+		display: block;
+		position: absolute;
+		top: 0;
+		right: 0;
+		z-index: 10;
+		padding: $padding;
+		border-radius: 0 2px 0 2px;
+		background: $slate;
+		color: white;
+		font-size: 14px;
+		&.alert {
+			background: $youtube;
+		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+	header {
+		display: block;
+		&:after {
+			left: $padding;
+			width: calc(100% - #{$padding*2};
+		}
+		svg {
+			display: block;
+			margin: 0 auto;
+			height: 100px!important;
+		}
+		div {
+			margin: 0;
+		}
+		h1 {
+			margin-top: $padding;
+			font-size: 28px!important;
+			text-align: center;
+		}
+		nav {
+			@include flex-center;
+		}
+	}
+	main {
+		> aside {
+			width: 100%;
+		}
+		> section {
+			width: 100%;
+			&.shop-page {
+				.shop-grid {
+					margin: $padding 0 0!important;
+					ul {
+						padding: $padding/2!important;
+						li {
+							width: 50%!important;
+							padding: $padding/2!important;
+						}
+					}
+				}
+			}
+			&.shop-item {
+				> div {
+					&:not(:last-child) {
+						width: 100%!important;
+					}
+				}
+			}
+		}
+	}
+}

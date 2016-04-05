@@ -1,0 +1,133 @@
+// prefix
+@mixin prefix($property, $value, $prefixes: ()) {
+	@each $prefix in $prefixes {
+		#{'-' + $prefix + '-' + $property}: $value;
+	}
+	#{$property}: $value;
+}
+
+// miscellaneous, no variables
+@mixin box-sizing {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+@mixin appearance {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+@mixin round {
+	border-radius: 1000px;
+}
+@mixin listless {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+// miscellaneous
+@mixin opacity($opacity) {
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=$opacity * 100)";
+	filter: alpha(opacity=$opacity * 100);
+	-khtml-opacity: $opacity;
+	-moz-opacity: $opacity;
+	opacity: $opacity;
+}
+@mixin border-radius($radius) {
+	border-radius: $radius+px;
+}
+@mixin blur($blur) {
+	@include prefix(filter, blur($blur+px), webkit moz ms o);
+	filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius='#{$blur}');
+}
+@mixin placeholder {
+	&::-webkit-input-placeholder {
+		@content;
+	}
+	&::-moz-placeholder {
+		@content;
+	}
+	&:-moz-placeholder {
+		@content;
+	}
+	&:-ms-input-placeholder {
+		@content;
+	}
+}
+@mixin stroke($stroke, $width) {
+	fill: none;
+	stroke: $stroke;
+	stroke-width: $width+px;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+}
+
+// flex
+@mixin flex {
+	-ms-box-orient: horizontal;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -moz-flex;
+	display: -ms-flexbox;
+	display: flex;
+}
+@mixin flex-wrap {
+	-ms-flex-flow: row wrap;
+	-webkit-flex-flow: row wrap;
+	flex-flow: row wrap;
+}
+@mixin flex-center {
+	-webkit-flex-direction: row;
+	flex-direction: row;
+	-webkit-align-items: center;
+	align-items: center;
+	-webkit-align-content: center;
+	align-content: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+}
+@mixin flex-center-horizontal {
+	-webkit-justify-content: center;
+	justify-content: center;
+}
+@mixin flex-center-vertical {
+	-webkit-align-items: center;
+	align-items: center;
+}
+
+// animation and transitions
+@mixin keyframes($name) {
+	@-webkit-keyframes #{$name} {
+		@content;
+	}
+	@-moz-keyframes #{$name} {
+		@content;
+	}
+	@-ms-keyframes #{$name} {
+		@content;
+	}
+	@keyframes #{$name} {
+		@content;
+	}
+}
+
+$links: 'a:active, a:focus, a:hover';
+$buttons: 'button:active, button:hover, button:focus, a[class*=btn]:active, a[class*=btn]:focus, a[class*=btn]:hover';
+
+$slate: #413D44;
+$forest: #495453;
+$grey: #A6ADA7;
+$robin: #2BB3B8;
+
+$facebook: #3b5998;
+$instagram: #517fa4;
+$linkedin: #007bb6;
+$twitter: #00aced;
+$youtube: #b31217;
+$vimeo: #1ab7ea;
+
+$padding: 12px;
+
+$font: "Roboto", sans-serif!important;
