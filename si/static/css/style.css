@@ -383,6 +383,7 @@ header a h1 {
   font-size: 48px;
   font-family: "Arkhip", sans-serif;
   text-transform: uppercase;
+  color: #413D44;
 }
 
 header a:hover h1, header a:focus h1 {

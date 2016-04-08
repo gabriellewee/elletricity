@@ -244,7 +244,7 @@ header {
 		height: 2px;
 		background: rgba($grey, .2);
 	}
-	 a {
+	a {
 		display: block;
 		text-decoration: none;
 		svg {
@@ -255,6 +255,7 @@ header {
 			font-size: 48px;
 			font-family: "Arkhip", sans-serif;
 			text-transform: uppercase;
+			color: $slate;
 		}
 		&:hover, &:focus {
 			h1 {
