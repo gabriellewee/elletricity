@@ -307,7 +307,7 @@ header {
 				@include listless;
 				@include flex;
 				> li {
-					padding: 0 $padding;
+					padding: ($padding/2) $padding;
 					position: relative;
 					> ul {
 						@include opacity(0);
@@ -376,8 +376,10 @@ main {
 			border-radius: 2px;
 		}
 		p {
-			margin-top: $padding;
 			line-height: 1.2;
+			&:not(:first-child) {
+				margin-top: $padding;
+			}
 			img {
 				margin-top: 0;
 			}
@@ -643,7 +645,7 @@ main {
 			text-align: center;
 		}
 		nav {
-			margin-top: $padding*2;
+			margin-top: $padding;
 			ul {
 				@include flex-center;
 			}
