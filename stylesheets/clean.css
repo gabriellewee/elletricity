@@ -139,6 +139,9 @@ a:hover, a:active, a:focus {
 .row {
 	max-width: 85rem;
 }
+.strike {
+	text-decoration: line-through;
+}
 
 #top {
     -webkit-transform: translate3d(0,0,0);
