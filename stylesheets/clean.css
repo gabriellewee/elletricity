@@ -724,7 +724,7 @@ a:hover, a:active, a:focus {
 		display: inline!important;
 	}
 
-#pagination {
+#pagination .columns {
 	display: flex;
 }
 #button, .button {
