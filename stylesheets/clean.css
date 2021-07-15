@@ -723,8 +723,11 @@ a:hover, a:active, a:focus {
 	#infscr-loading img {
 		display: inline!important;
 	}
-#button {
-	width: 100%;
+
+#pagination {
+	display: flex;
+}
+#button, .button {
 	border: 0;
 	border-radius: 1rem;
 	padding: 2rem 0;
@@ -734,9 +737,26 @@ a:hover, a:active, a:focus {
 	font-weight: 900;
 	text-transform: uppercase;
 }
-#button:hover,
-#button:active,
-#button:focus {
+#button {
+	width: 100%;
+}
+.button {
+	width: calc(100% - 1rem);
+}
+.button:first-child {
+	margin-right: 1rem;
+}
+.button:last-child {
+	margin-left: 1rem;
+}
+.button:only-child {
+	margin-left: 0;
+	margin-right: 0;
+	width: 100%;
+}
+#button:hover, .button:hover,
+#button:active, .button:active,
+#button:focus, .button:focus {
 	outline: none;
 	background: #d34836;
 	color: white;
