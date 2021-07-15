@@ -119,7 +119,7 @@ select{width:100%}
 .cboxIframe{display:block;width:100%;height:100%;border:0}
 #colorbox,#cboxContent,#cboxLoadedContent{box-sizing:content-box}
 #cboxOverlay{position:fixed;width:100%;height:100%;background:#000}
-#cboxLoadingGraphic{background:url(http://static.tumblr.com/imovwvl/wBVlz84rh/loading.gif) no-repeat center center}
+#cboxLoadingGraphic{background:url(https://static.tumblr.com/imovwvl/wBVlz84rh/loading.gif) no-repeat center center}
 #cboxLoadingOverlay{background:#000}
 #cboxTitle,#cboxCurrent,#cboxSlideshow,#cboxPrevious,#cboxNext,#cboxClose{display:none!important}
 #warning{position:relative;z-index:999999;padding:10px 20px;background:#D40000;text-align:center;color:white}

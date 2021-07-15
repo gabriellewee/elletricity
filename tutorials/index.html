@@ -40,7 +40,7 @@
 </head>
 <body>
 <!--[if lt IE 9]>
-<div id="warning">This theme does not support your browser (Internet Explorer 8 and below).<br/>Please update to a <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie">newer version</a> of Internet Explorer or try another browser - I recommend <a href="https://www.google.com/intl/en/chrome/browser/">Google Chrome</a> or <a href="http://www.mozilla.org/en-US/firefox/new/">Mozilla Firefox</a>.</div>
+<div id="warning">This theme does not support your browser (Internet Explorer 8 and below).<br/>Please update to a <a href="https://windows.microsoft.com/en-us/internet-explorer/download-ie">newer version</a> of Internet Explorer or try another browser - I recommend <a href="https://www.google.com/intl/en/chrome/browser/">Google Chrome</a> or <a href="https://www.mozilla.org/en-US/firefox/new/">Mozilla Firefox</a>.</div>
 <![endif]-->
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
@@ -78,7 +78,7 @@
 				</li>
 				<li>
 					<i class="typcn typcn-directions"></i>
-					<a href="http://gabriellew.ee">Links</a>
+					<a href="https://gabriellew.ee?redirect=gabrielleismy.name">Links</a>
 					<a href="/contact/">Contact</a>
 				</li>
 			</ul>
@@ -144,15 +144,15 @@
 		</h1>
 		<div class="body">
 			<p>This tutorial was created on a Macbook Pro running OS X Snow Leopard (10.6.8). You will need a Gmail account to use the mail icon.</p>
-			<p>I use the Segoe UI font on this tutorial, which is not normally available for use on a Mac. You can find this font on your own or use an alternative such as <a href="http://www.google.com/webfonts/specimen/Open+Sans">Open Sans</a>.</p>
+			<p>I use the Segoe UI font on this tutorial, which is not normally available for use on a Mac. You can find this font on your own or use an alternative such as <a href="https://www.google.com/webfonts/specimen/Open+Sans">Open Sans</a>.</p>
 			<p>Basic commands &rarr; <kbd>&#8984;</kbd> + <kbd>A</kbd> (Select All), <kbd>&#8984;</kbd> + <kbd>C</kbd> (Copy), <kbd>&#8984;</kbd> + <kbd>V</kbd> (Paste).</p>
 			<p><strong><em>This is not compatible with any operating system other than Mac OS X.</em></strong></p>
 			<ol>
 				<li>
-					<p>You will need to download <a href="http://projects.tynsoe.org/en/geektool/">GeekTool</a> and install it on your computer. I also recommend that you bookmark TextEdit by dragging it from the Applications folder into your dock.</p>
+					<p>You will need to download <a href="https://projects.tynsoe.org/en/geektool/">GeekTool</a> and install it on your computer. I also recommend that you bookmark TextEdit by dragging it from the Applications folder into your dock.</p>
 				</li>
 				<li>
-					<p>Download the zip file from the <a href="http://elletricity.com/resources/">resources page</a>. Unzip the file and move it to a permanent place on your computer, somewhere you won't move it from for as long as you have this geeklet. For the purpose of this tutorial, I have left it on the desktop.</p>
+					<p>Download the zip file from the <a href="https://elletricity.com/resources/">resources page</a>. Unzip the file and move it to a permanent place on your computer, somewhere you won't move it from for as long as you have this geeklet. For the purpose of this tutorial, I have left it on the desktop.</p>
 					<p><img src="/tutorials/geektool-w7/1.png" alt=""/></p>
 				</li>
 				<li>
@@ -197,16 +197,16 @@
 					<p>Open <code>weather-temp.glet</code> and set the group to <code>Weather</code>. The font should already be set to <code>normal</code> <code>18pt</code> <code>Segoe UI</code>. Copy the string from the <code>Command</code> section and paste it into a TextEdit file.</p>
 					<p>Go back to the weather page and copy just the numerical part of the URL - it is called the WOEID and should be seven or eight numbers.</p>
 					<p><img src="/tutorials/geektool-w7/13a.png" alt=""/></p>
-					<p>The current URL is <code>http://weather.yahooapis.com/forecastrss?p=USCA0791&amp;u=f</code></p>
-					<p>Change the last part from <code>p=USCA0791&amp;u=f</code> to <code>w=WOEID&amp;u=f</code> where WOEID is the URL part that you copied. For example, for LA, I would change to <code>w=12795619&amp;u=f</code>, and my entire new URL would be <code>http://weather.yahooapis.com/forecastrss?w=12795619&amp;u=f</code>.</p>
+					<p>The current URL is <code>https://weather.yahooapis.com/forecastrss?p=USCA0791&amp;u=f</code></p>
+					<p>Change the last part from <code>p=USCA0791&amp;u=f</code> to <code>w=WOEID&amp;u=f</code> where WOEID is the URL part that you copied. For example, for LA, I would change to <code>w=12795619&amp;u=f</code>, and my entire new URL would be <code>https://weather.yahooapis.com/forecastrss?w=12795619&amp;u=f</code>.</p>
 					<p><img src="/tutorials/geektool-w7/13b.png" alt=""/></p>
 					<p>Copy the new URL and paste it back into the <code>Command</code> section, then hit <kbd>Enter</kbd>.</p>
 				</li>
 				<li>
 					<p>If you would like to switch from Fahrenheit to Celsius, you must change all instances of F into C - the f at the end of the URL and two F's in the string.</p>
-					<pre>curl --silent "http://weather.yahooapis.com/forecastrss?w=12795619&amp;u=f" | grep -E '(Current Conditions:|F&lt;BR)' | tail -n1 | sed -e 's/&lt;BR \/&gt;//' -e 's/\(.*\), \(.*\) F$/\2˚/'</pre>
+					<pre>curl --silent "https://weather.yahooapis.com/forecastrss?w=12795619&amp;u=f" | grep -E '(Current Conditions:|F&lt;BR)' | tail -n1 | sed -e 's/&lt;BR \/&gt;//' -e 's/\(.*\), \(.*\) F$/\2˚/'</pre>
 					<p>should change to this:</p>
-					<pre>curl --silent "http://weather.yahooapis.com/forecastrss?w=12795619&amp;u=c" | grep -E '(Current Conditions:|C&lt;BR)' | tail -n1 | sed -e 's/&lt;BR \/&gt;//' -e 's/\(.*\), \(.*\) C$/\2˚/'</pre>
+					<pre>curl --silent "https://weather.yahooapis.com/forecastrss?w=12795619&amp;u=c" | grep -E '(Current Conditions:|C&lt;BR)' | tail -n1 | sed -e 's/&lt;BR \/&gt;//' -e 's/\(.*\), \(.*\) C$/\2˚/'</pre>
 				</li>
 				<li>
 					<p>Open <code>mail-bg.glet</code> and <code>mail-label.glet</code>. Set the font to <code>normal</code> <code>13pt</code> <code>Segoe UI</code>. Set each geeklet's group to <code>Mail</code>. Now open <code>mail-icon.glet</code> and <code>Set local path</code> to the location of <code>mail.png</code>, inside your <code>glets</code> folder.</p>
@@ -231,7 +231,7 @@
 					<p>Make sure to set each geeklet's group to <code>Calendar</code> after opening.</p>
 				</li>
 				<li>
-					<p>Download <a href="http://hasseg.org/icalBuddy/">iCalBuddy</a>, unzip the file, and move it into your <code>glets</code> folder. Open the iCalBuddy folder and follow the instructions to install it.</p>
+					<p>Download <a href="https://hasseg.org/icalBuddy/">iCalBuddy</a>, unzip the file, and move it into your <code>glets</code> folder. Open the iCalBuddy folder and follow the instructions to install it.</p>
 				</li>
 				<li>
 					<p><strong><em>This step is optional but is recommended to check your iCal tile.</em></strong></p>
@@ -248,7 +248,7 @@
 					<p>If you would like another image underneath, click the image icon on the GeekTool preference panel and drag it onto your desktop. Figure out how far below your image needs to be - the first image's position was at 15 x 250px, my image was 233px tall, and the spacing between each geeklet is 5px. So, 250 + 233 + 5 = 488. The second image's position should be 15 x 488px. Calculate the new height the same way as the previous step.</p>
 				</li>
 				<li>
-					<p>You're finished! Enjoy your new Windows 7 geeklet. I hope you enjoyed this tutorial, and if you have any questions, please direct them to my <a href="http://elletricity.com/contact/">contact</a> page.</p>
+					<p>You're finished! Enjoy your new Windows 7 geeklet. I hope you enjoyed this tutorial, and if you have any questions, please direct them to my <a href="https://elletricity.com/contact/">contact</a> page.</p>
 					<p><img src="/tutorials/geektool-w7/21.png" alt=""/></p>
 				</li>
 			</ol>
@@ -296,7 +296,7 @@
 				</li>
 				<li>
 					<p>Once you're satisfied, press <kbd>&#8984;</kbd> + <kbd>Shift</kbd> + <kbd>Alt</kbd> + <kbd>S</kbd>. You can use the following options for saving or tweak your own. GIFs must be 500px wide or smaller and under 500k to upload properly on Tumblr. Reduce the amount of colors to shrink file size.</p>
-				<p><img src="http://cl.ly/5Nbm/Screen%20shot%202011-03-21%20at%201.59.02%20AM.png" alt=""/></p>
+				<p><img src="https://cl.ly/5Nbm/Screen%20shot%202011-03-21%20at%201.59.02%20AM.png" alt=""/></p>
 				</li>
 			</ol>
 			<p class="back">
@@ -344,7 +344,7 @@
 					<p>Click <code>Update Preview</code>, then <code>Save</code>.</p>
 				</li>
 			</ol>
-			<p class="text-center">If you find this tutorial useful, you can <a href="http://www.tumblr.com/reblog/4037405252/OmwUjMgt">reblog</a> it to your own Tumblr blog.</p>
+			<p class="text-center">If you find this tutorial useful, you can <a href="https://www.tumblr.com/reblog/4037405252/OmwUjMgt">reblog</a> it to your own Tumblr blog.</p>
 			<p class="back">
 				<a href="#top">
 					<i class="typcn typcn-arrow-up-outline"></i>
@@ -388,7 +388,7 @@
 					<p>You can always delete the original photo posts once you&rsquo;ve finished with them.</p>
 				</li>
 			</ol>
-			<p class="text-center">If you find this tutorial useful, you can <a href="http://www.tumblr.com/reblog/73926455914/iprWnu1F">reblog</a> it to your own Tumblr blog.</p>
+			<p class="text-center">If you find this tutorial useful, you can <a href="https://www.tumblr.com/reblog/73926455914/iprWnu1F">reblog</a> it to your own Tumblr blog.</p>
 			<p class="back">
 				<a href="#top">
 					<i class="typcn typcn-arrow-up-outline"></i>

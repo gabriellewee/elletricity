@@ -100,7 +100,7 @@ $(function() {
         } else $(".next-button").hide()
     });
     $('.local-scroll').localScroll();
-    $("#menu > ul > li:last-child").after(' <li><a class="star" href="http://elletricity.com" title="Theme( )"><i></i></a></li>');
+    $("#menu > ul > li:last-child").after(' <li><a class="star" href="https://elletricity.com" title="Theme( )"><i></i></a></li>');
     $('.process, .process-small, .star, .pag-button, .transistor-link').tooltip();
     $("p:empty").remove();
     $('.selector').each(function(e) {
