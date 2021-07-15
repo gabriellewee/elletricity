@@ -756,12 +756,13 @@ a:hover, a:active, a:focus {
 	margin-right: 0;
 	width: 100%;
 }
-#button:hover, .button:hover,
-#button:active, .button:active,
-#button:focus, .button:focus {
+#button:hover, .pag-button:hover,
+#button:active, .pag-button:active,
+#button:focus, .pag-button:focus {
 	outline: none;
 	background: #d34836;
 	color: white;
+	text-decoration: none;
     -moz-transition: all .5s ease-in-out;
     -webkit-transition: all .5s ease-in-out;
     -o-transition: all .5s ease-in-out;
