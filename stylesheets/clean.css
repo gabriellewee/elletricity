@@ -728,6 +728,7 @@ a:hover, a:active, a:focus {
 	display: flex;
 }
 #button, .button {
+	display: block;
 	border: 0;
 	border-radius: 1rem;
 	padding: 2rem 0;
