@@ -983,6 +983,11 @@ a:hover, a:active, a:focus {
 		.download a:focus {
 			color: #d34836;
 		}
+        .download a[aria-disabled="true"] {
+            cursor: not-allowed;
+            pointer-events: none;
+    		opacity: 0.5;
+    	}
 
 /* Tutorials */
 #tutorials h1 b {
