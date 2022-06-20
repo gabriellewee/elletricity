@@ -1,2 +1,4 @@
 /blog https://blog.elletricity.com
 /answers https://answers.elletricity.com
+http://elletricity.netlify.app/* http://elletricity.com/:splat 301!
+https://elletricity.netlify.app/* https://elletricity.com/:splat 301!
