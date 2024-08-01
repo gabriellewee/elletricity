@@ -2,9 +2,9 @@
 /answers https://answers.elletricity.com
 http://elletricity.netlify.app/* http://elletricity.com/:splat 301!
 https://elletricity.netlify.app/* https://elletricity.com/:splat 301!
-https://excelle.elletricity.com https://excelle-theme.tumblr.com
-https://fleux.elletricity.com https://fleux-theme.tumblr.com
-https://greying.elletricity.com https://greying-theme.tumblr.com
-https://transistor.elletricity.com https://transistor-theme.tumblr.com
-https://tumblook.elletricity.com https://tumblook-theme.tumblr.com
-https://twittlr.elletricity.com https://twittlr-theme.tumblr.com
+https://excelle.elletricity.com https://excelle-theme.tumblr.com 301!
+https://fleux.elletricity.com https://fleux-theme.tumblr.com 301!
+https://greying.elletricity.com https://greying-theme.tumblr.com 301!
+https://transistor.elletricity.com https://transistor-theme.tumblr.com 301!
+https://tumblook.elletricity.com https://tumblook-theme.tumblr.com 301!
+https://twittlr.elletricity.com https://twittlr-theme.tumblr.com 301!
